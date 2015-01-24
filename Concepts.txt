@@ -1,0 +1,82 @@
+- WarioWare co-op
+- Slightly longer
+- Bucket list
+- Overall timer (complete as many as possible -- finish and die)
+- Only A button and analog sticks
+- Player 1 red, Player 2 blue
+    - They can have different roles
+- Fail state: ambulance image, some time lost
+    
+MINIGAME IDEAS
+--------------
+GO DRINKING:
+- Player 1 pours (list of commands to mix drink)
+- Player 2 drinks (keep target in center to not spill)
+- 3 drinks to finish
+
+GO SKYDIVING:
+- Get to the bottom without hitting stuff
+- Player 1: up and down, player 2: left and right
+
+DO PARKOUR:
+- Player 1 is running
+- Player 2 is helping them up
+
+TRAVEL:
+- Players on each wing, try to keep it balanced in turbulence
+
+GET FIT:
+- Work together to lift a weight
+- Press the button at the same time
+- 10 reps to win
+
+PARTICIPATE IN A BIKE MARATHON:
+- Player 1 is blindfolded, running (mash A)
+- Player 2 is steering
+
+TAKE UP A NEW SPORT:
+- Players taped together
+- "Tank tread" controls
+- Push off the other sumo
+- Knocked off: ambulance
+
+CLIMB A MOUNTAIN:
+- Skifree
+- Mess up -> go to hospital (like skydiving)
+
+ACTUALLY CLIMB A MOUNTAIN:
+- Pull each other up?
+
+MAKE SOME MONEY:
+- Rob a bank
+- Press A in time to pass bags of money along to truck
+- 5 to win
+
+GO DIVING:
+- Player 1 pumps air
+- Player 2 dodges sharks
+
+GO HORSEBACK RIDING:
+- Player 1 riding horse
+- Player 2 dragged by rope
+- Both trying to avoid obstacles
+
+EXPERIENCE A SUNRISE:
+- Don't press any buttons or the sun gets grumpy and goes back down
+
+GO STARGAZING:
+- Stars falling from sky
+- Collide with each other
+
+RELIVE CHILDHOOD:
+- Seesaw on the top of a mountain
+- 5 back and forth to win
+- Screw up and fall off
+
+VISIT THE ZOO/GET A PET:
+- Player 1 avoids lion, stuck in cage
+- Player 2 picks lock
+
+DIE:
+- Mash A to die
+- Stand back up if you haven't pressed it enough
