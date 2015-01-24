@@ -30,6 +30,9 @@
     <script>scripts\input_check_released.gml</script>
     <script>scripts\input_check_pressed.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_small</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_screen_control</object>
     <object>objects\obj_global</object>
@@ -41,6 +44,7 @@
       <object>objects\obj_money_player_2</object>
       <object>objects\obj_money_truck</object>
       <object>objects\obj_money_control</object>
+      <object>objects\obj_money_counter</object>
     </objects>
     <objects name="horseriding">
       <object>objects\obj_horse_horse</object>

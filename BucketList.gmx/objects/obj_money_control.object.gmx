@@ -51,11 +51,13 @@ alarm[0] = bagTime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Spawn bag
-var bag = instance_create(-36, 148, obj_money_bag);
-
-// Reset alarm
-alarm[0] = bagTime;
+            <string>if (obj_money_counter.count &lt; obj_money_counter.maxCount) {
+    // Spawn bag
+    var bag = instance_create(-36, 148, obj_money_bag);
+    
+    // Reset alarm
+    alarm[0] = bagTime;
+}
 </string>
           </argument>
         </arguments>
