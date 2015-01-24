@@ -24,10 +24,14 @@
       <sprite>sprites\spr_avalanche_player_1</sprite>
       <sprite>sprites\spr_avalanche_player_2</sprite>
       <sprite>sprites\spr_avalanche_rock</sprite>
+    <sprites name="childhood">
+      <sprite>sprites\spr_seesaw</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
+    <background>background\bg_mountain_sky</background>
+    <background>background\bg_mountain</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -63,6 +67,9 @@
       <object>objects\obj_avalanche_player_2</object>
       <object>objects\obj_avalanche_rock</object>
       <object>objects\obj_avalanche_control</object>
+    <objects name="childhood">
+      <object>objects\obj_seesaw</object>
+      <object>objects\obj_childhood_point_counter</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -70,6 +77,7 @@
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
+    <room>rooms\childhood</room>
     <room>rooms\template</room>
   </rooms>
   <help>
