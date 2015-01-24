@@ -14,11 +14,9 @@
       <sprite>sprites\spr_money_truck</sprite>
     </sprites>
     <sprites name="horseriding">
-      <sprite>sprites\spr_horse_horse</sprite>
-      <sprite>sprites\spr_horse_player_1</sprite>
+      <sprite>sprites\spr_horse_player_1_1</sprite>
       <sprite>sprites\spr_horse_player_2</sprite>
       <sprite>sprites\spr_horse_rock</sprite>
-      <sprite>sprites\spr_horse_rope</sprite>
     </sprites>
     <sprites name="avalanche">
       <sprite>sprites\spr_avalanche_player_1</sprite>
@@ -32,12 +30,23 @@
       <sprite>sprites\spr_sumo</sprite>
       <sprite>sprites\spr_sumo_players</sprite>
     </sprites>
+    <sprites name="weightlifting">
+      <sprite>sprites\spr_weight_player_1</sprite>
+      <sprite>sprites\spr_weight_player_2</sprite>
+      <sprite>sprites\spr_weight_weight</sprite>
+    </sprites>
+    <sprites name="airplane">
+      <sprite>sprites\spr_airplane_player_1</sprite>
+      <sprite>sprites\spr_airplane_player_2</sprite>
+      <sprite>sprites\spr_airplane_airplane</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
     <background>background\bg_mountain_sky</background>
     <background>background\bg_mountain</background>
     <background>background\bg_sumo</background>
+    <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -62,7 +71,6 @@
       <object>objects\obj_money_counter</object>
     </objects>
     <objects name="horseriding">
-      <object>objects\obj_horse_horse</object>
       <object>objects\obj_horse_player_1</object>
       <object>objects\obj_horse_player_2</object>
       <object>objects\obj_horse_rock</object>
@@ -82,6 +90,16 @@
       <object>objects\obj_sumo</object>
       <object>objects\obj_sumo_players</object>
     </objects>
+    <objects name="weightlifting">
+      <object>objects\obj_weight_player_1</object>
+      <object>objects\obj_weight_player_2</object>
+      <object>objects\obj_weight_weight</object>
+    </objects>
+    <objects name="airplane">
+      <object>objects\obj_airplane_player_1</object>
+      <object>objects\obj_airplane_player_2</object>
+      <object>objects\obj_airplane_airplane</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
@@ -90,7 +108,9 @@
     <room>rooms\avalanche</room>
     <room>rooms\childhood</room>
     <room>rooms\sumo</room>
+    <room>rooms\weightlifting</room>
     <room>rooms\template</room>
+    <room>rooms\airplane</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
