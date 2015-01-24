@@ -33,6 +33,11 @@
       <sprite>sprites\spr_weight_player_2</sprite>
       <sprite>sprites\spr_weight_weight</sprite>
     </sprites>
+    <sprites name="airplane">
+      <sprite>sprites\spr_airplane_player_1</sprite>
+      <sprite>sprites\spr_airplane_player_2</sprite>
+      <sprite>sprites\spr_airplane_airplane</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
@@ -83,6 +88,11 @@
       <object>objects\obj_weight_player_2</object>
       <object>objects\obj_weight_weight</object>
     </objects>
+    <objects name="airplane">
+      <object>objects\obj_airplane_player_1</object>
+      <object>objects\obj_airplane_player_2</object>
+      <object>objects\obj_airplane_airplane</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
@@ -92,6 +102,7 @@
     <room>rooms\childhood</room>
     <room>rooms\weightlifting</room>
     <room>rooms\template</room>
+    <room>rooms\airplane</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
