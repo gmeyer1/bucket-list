@@ -52,8 +52,8 @@ xdistance = 50;
           <argument>
             <kind>1</kind>
             <string>//Get the player's input
-key_right = input_check_pressed(PLAYER.PLAYER2, INPUT.RIGHT);//keyboard_check(ord('D'));
-key_left = -input_check_pressed(PLAYER.PLAYER2, INPUT.LEFT);//keyboard_check(ord('A'));
+key_right = input_check(PLAYER.PLAYER2, INPUT.RIGHT);//keyboard_check(ord('D'));
+key_left = -input_check(PLAYER.PLAYER2, INPUT.LEFT);//keyboard_check(ord('A'));
 
 //React to inputs
 move = key_left + key_right;
@@ -67,14 +67,13 @@ if (x &gt; room_width)
 }
 if (x &lt; 0)
 {
-    if (key_left)
+    if (key_left == -1)
         hsp = 0;
 }
 if (x+hsp &lt; obj_horse_player_1.x - xdistance)
 {
     hsp = obj_horse_player_1.x - xdistance - x;
 }
-
 if (x+hsp &gt; obj_horse_player_1.x + xdistance)
 {
     hsp = obj_horse_player_1.x + xdistance - x;

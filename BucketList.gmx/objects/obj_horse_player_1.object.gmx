@@ -69,7 +69,6 @@ if (x &gt; room_width)
     if (key_right)
     {
         hsp = 0;
-        hsp2 = 0;
     }
 }
 if (x &lt; 0)
@@ -77,12 +76,14 @@ if (x &lt; 0)
     if (key_left == -1)
     {
         hsp = 0;
-        hsp2 = 0;
     }
 }
 if ((x &gt;= obj_horse_player_2.x &amp;&amp; hsp2 &gt; 0) || (x &lt;= obj_horse_player_2.x &amp;&amp; hsp2 &lt; 0))
 {
-    obj_horse_player_2.x += hsp2;
+    if (obj_horse_player_2.x &lt; x + p2movespeed - 1 &amp;&amp; obj_horse_player_2.x &gt; x - p2movespeed + 1)
+        obj_horse_player_2.x = x;
+    else    
+        obj_horse_player_2.x += hsp2;
     
 }
 x += hsp;
