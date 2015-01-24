@@ -28,6 +28,11 @@
     <sprites name="childhood">
       <sprite>sprites\spr_seesaw</sprite>
     </sprites>
+    <sprites name="weightlifting">
+      <sprite>sprites\spr_weight_player_1</sprite>
+      <sprite>sprites\spr_weight_player_2</sprite>
+      <sprite>sprites\spr_weight_weight</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
@@ -73,6 +78,11 @@
       <object>objects\obj_seesaw</object>
       <object>objects\obj_childhood_point_counter</object>
     </objects>
+    <objects name="weightlifting">
+      <object>objects\obj_weight_player_1</object>
+      <object>objects\obj_weight_player_2</object>
+      <object>objects\obj_weight_weight</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
@@ -80,6 +90,7 @@
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
     <room>rooms\childhood</room>
+    <room>rooms\weightlifting</room>
     <room>rooms\template</room>
   </rooms>
   <help>
