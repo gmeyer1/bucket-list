@@ -20,9 +20,14 @@
       <sprite>sprites\spr_horse_rock</sprite>
       <sprite>sprites\spr_horse_rope</sprite>
     </sprites>
+    <sprites name="childhood">
+      <sprite>sprites\spr_seesaw</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
+    <background>background\bg_mountain_sky</background>
+    <background>background\bg_mountain</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -53,11 +58,16 @@
       <object>objects\obj_horse_rock</object>
       <object>objects\obj_horse_control</object>
     </objects>
+    <objects name="childhood">
+      <object>objects\obj_seesaw</object>
+      <object>objects\obj_childhood_point_counter</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
+    <room>rooms\childhood</room>
     <room>rooms\template</room>
   </rooms>
   <help>
