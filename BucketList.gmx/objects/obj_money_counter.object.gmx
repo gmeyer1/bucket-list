@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>count = 0;
-maxCount = 5;
+maxCount = 25;
 </string>
           </argument>
         </arguments>
