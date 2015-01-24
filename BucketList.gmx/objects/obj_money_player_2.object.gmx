@@ -29,8 +29,15 @@
     var bag = instance_place(x, y, obj_money_bag);
     
     if (bag != noone &amp;&amp; bag.passes == 1) {
+        bag.x = x;
+        bag.y = y;
         bag.passes++;
-        bag.vspeed = -3;
+        
+        // Freeze for a second before moving
+        bag.hspeed = 0;
+        bag.vspeed = 0;
+        bag.gravity = 0;
+        bag.alarm[0] = bag.passTime;
     }
 }
 </string>
