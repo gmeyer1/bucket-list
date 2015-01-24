@@ -15,28 +15,28 @@ case PLAYER.PLAYER2:
 switch (argument1)
 {
 case INPUT.RIGHT:
-    if (keyboard_check_pressed(ord('D')) || gamepad_button_check_pressed(player, gp_padr))
+    if ((player == 0 && keyboard_check_pressed(ord('D'))) || (player == 1 && keyboard_check_pressed(vk_right)) || gamepad_button_check_pressed(player, gp_padr))
     {
         return true;
     }
     break;
 
 case INPUT.LEFT:
-    if (keyboard_check_pressed(ord('A')) || gamepad_button_check_pressed(player, gp_padl))
+    if ((player == 0 && keyboard_check_pressed(ord('A'))) || (player == 1 && keyboard_check_pressed(vk_left)) || gamepad_button_check_pressed(player, gp_padl))
     {
         return true;
     }
     break;
 
 case INPUT.UP:
-    if (keyboard_check_pressed(ord('W')) || gamepad_button_check_pressed(player, gp_padu))
+    if ((player == 0 && keyboard_check_pressed(ord('W'))) || (player == 1 && keyboard_check_pressed(vk_up)) || gamepad_button_check_pressed(player, gp_padu))
     {
         return true;
     }
     break;
 
 case INPUT.DOWN:
-    if (keyboard_check_pressed(ord('S')) || gamepad_button_check_pressed(player, gp_padd))
+    if ((player == 0 && keyboard_check_pressed(ord('S'))) || (player == 1 && keyboard_check_pressed(vk_down)) || gamepad_button_check_pressed(player, gp_padd))
     {
         return true;
     }

@@ -52,8 +52,8 @@ p2movespeed = 3;
           <argument>
             <kind>1</kind>
             <string>//Get the player's input
-key_right = input_check_pressed(PLAYER.PLAYER1, INPUT.RIGHT);//keyboard_check(vk_right);
-key_left = -input_check_pressed(PLAYER.PLAYER1, INPUT.LEFT);//keyboard_check(vk_left);
+key_right = input_check(PLAYER.PLAYER1, INPUT.RIGHT);//keyboard_check(vk_right);
+key_left = -input_check(PLAYER.PLAYER1, INPUT.LEFT);//keyboard_check(vk_left);
 
 //React to inputs
 move = key_left + key_right;
