@@ -58,7 +58,6 @@
     <instance objName="obj_horse_horse" x="160" y="96" name="inst_C6E128BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_horse_player_2" x="160" y="224" name="inst_E5E591F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_horse_control" x="288" y="0" name="inst_C25118B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="128" y="96" name="inst_7FFF19AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
