@@ -54,6 +54,7 @@
     <room>rooms\start</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
+    <room>rooms\template</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
