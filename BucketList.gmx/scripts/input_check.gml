@@ -14,28 +14,28 @@ case PLAYER.PLAYER2:
 switch (argument1)
 {
 case INPUT.RIGHT:
-    if ((player == 0 && keyboard_check(ord('D'))) || (player == 0 && keyboard_check(vk_right)) || gamepad_button_check(player, gp_padr))
+    if ((player == 0 && keyboard_check(ord('D'))) || (player == 1 && keyboard_check(vk_right)) || gamepad_button_check(player, gp_padr))
     {
         return true;
     }
     break;
 
 case INPUT.LEFT:
-    if ((player == 0 && keyboard_check(ord('A'))) || (player == 0 && keyboard_check(vk_left)) || gamepad_button_check(player, gp_padl))
+    if ((player == 0 && keyboard_check(ord('A'))) || (player == 1 && keyboard_check(vk_left)) || gamepad_button_check(player, gp_padl))
     {
         return true;
     }
     break;
 
 case INPUT.UP:
-    if ((player == 0 && keyboard_check(ord('W'))) || (player == 0 && keyboard_check(vk_up)) || gamepad_button_check(player, gp_padu))
+    if ((player == 0 && keyboard_check(ord('W'))) || (player == 1 && keyboard_check(vk_up)) || gamepad_button_check(player, gp_padu))
     {
         return true;
     }
     break;
 
 case INPUT.DOWN:
-    if ((player == 0 && keyboard_check(ord('S'))) || (player == 0 && keyboard_check(vk_down)) || gamepad_button_check(player, gp_padd))
+    if ((player == 0 && keyboard_check(ord('S'))) || (player == 1 && keyboard_check(vk_down)) || gamepad_button_check(player, gp_padd))
     {
         return true;
     }
