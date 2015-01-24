@@ -53,6 +53,15 @@ maxPoints = 3;
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_text(x, y, string(points) + " / " + string(maxPoints) + " turns");
+
+var sideString = "";
+if (obj_seesaw.lastSide == -1) {
+    sideString = "&lt;&lt;&lt;&lt;&lt;";
+} else if (obj_seesaw.lastSide == 1) {
+    sideString = "&gt;&gt;&gt;&gt;&gt;";
+}
+
+draw_text(x, y + 12, sideString);
 </string>
           </argument>
         </arguments>

@@ -28,7 +28,7 @@
             <string>angleVel = 0; // Current angular velocity
 playerAccel = 0.06; // Acceleration due to players pressing down
 tipAccel = 0.08; // Acceleration due to gravity
-pointAngle = 20; // Angle to get a point
+pointAngle = 15; // Angle to get a point
 failAngle = 50; // Angle to fail the game
 lastSide = 0; // The last player who tipped down (-1 -&gt; P1, 0 -&gt; nobody, 1 -&gt; P2)
 </string>
