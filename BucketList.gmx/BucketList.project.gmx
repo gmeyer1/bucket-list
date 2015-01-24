@@ -24,6 +24,7 @@
       <sprite>sprites\spr_avalanche_player_1</sprite>
       <sprite>sprites\spr_avalanche_player_2</sprite>
       <sprite>sprites\spr_avalanche_rock</sprite>
+    </sprites>
     <sprites name="childhood">
       <sprite>sprites\spr_seesaw</sprite>
     </sprites>
@@ -67,6 +68,7 @@
       <object>objects\obj_avalanche_player_2</object>
       <object>objects\obj_avalanche_rock</object>
       <object>objects\obj_avalanche_control</object>
+    </objects>
     <objects name="childhood">
       <object>objects\obj_seesaw</object>
       <object>objects\obj_childhood_point_counter</object>
