@@ -133,6 +133,7 @@
     </objects>
     <objects name="intro">
       <object>objects\obj_intro</object>
+      <object>objects\obj_intro_controller</object>
     </objects>
     <objects name="title">
       <object>objects\obj_player1_start</object>

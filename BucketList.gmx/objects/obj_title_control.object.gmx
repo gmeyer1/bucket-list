@@ -55,7 +55,7 @@ obj_timer.enabled = false;
     visible = true;
     enabled = true;
 }
-room_goto(list);
+room_goto(intro);
 </string>
           </argument>
         </arguments>
