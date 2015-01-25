@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\explosion</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprites name="makemoney">
       <sprite>sprites\spr_money_player_1</sprite>
@@ -116,7 +115,6 @@
     <object>objects\obj_global</object>
     <object>objects\obj_test</object>
     <object>objects\obj_debug_next</object>
-    <object>objects\obj_explosion</object>
     <object>objects\obj_timer</object>
     <objects name="title">
       <object>objects\obj_player1_start</object>
@@ -206,7 +204,6 @@
     <room>rooms\stargazing</room>
     <room>rooms\bikerace</room>
     <room>rooms\ambulance</room>
-    <room>rooms\explode</room>
     <room>rooms\template</room>
   </rooms>
   <help>
