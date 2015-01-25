@@ -35,10 +35,34 @@ turbulenceChangeSpeed = 0.003;
 dirSign = 0;
 tipRate = 1.5;
 failed = false;
+offscreen = false;
 
 simplex = simplex_init();
 steps = 0;
 hasTurbulence = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(ambulance);
 </string>
           </argument>
         </arguments>
@@ -77,6 +101,7 @@ if (failed) {
     // Tipped too far
     if (abs(image_angle) &gt; 40) {
         failed = true;
+        obj_airplane_countdown.visible = false;
     }
     
     image_angle += angleDir * maxTurnRate;
@@ -118,6 +143,32 @@ steps++;
           <argument>
             <kind>1</kind>
             <string>simplex_cleanup(simplex);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!offscreen) {
+    offscreen = true;
+    alarm[0] = room_speed * 1;
+}
 </string>
           </argument>
         </arguments>

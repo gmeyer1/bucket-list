@@ -49,6 +49,10 @@
           <argument>
             <kind>1</kind>
             <string>if (obj_airplane.hasTurbulence) timeLeft--;
+
+if (timeLeft &lt;= 0) {
+    room_goto(list);
+}
 </string>
           </argument>
         </arguments>
