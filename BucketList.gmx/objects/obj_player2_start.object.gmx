@@ -55,6 +55,7 @@
     input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
     
     image_index = 1;
+    audio_play_sound(dingdong, 100, false);
 }
 </string>
           </argument>
