@@ -56,6 +56,10 @@
       <sprite>sprites\spr_stargazing_player_1</sprite>
       <sprite>sprites\spr_stargazing_player_2</sprite>
     </sprites>
+    <sprites name="bikerace">
+      <sprite>sprites\spr_bikerace_player</sprite>
+      <sprite>sprites\spr_bikerace_opponent</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
@@ -65,6 +69,11 @@
     <background>background\bg_grass</background>
     <background>background\bg_bank</background>
     <background>background\bg_childhood</background>
+<<<<<<< HEAD
+    <background>background\bg_bikerace</background>
+=======
+    <background>background\bg_avalanche</background>
+>>>>>>> e451d2d9d1895013e8720b579513383afdac01d0
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -154,13 +163,10 @@
     <room>rooms\childhood</room>
     <room>rooms\sumo</room>
     <room>rooms\weightlifting</room>
-<<<<<<< HEAD
-    <room>rooms\airplane</room>
-    <room>rooms\stargazing</room>
-=======
     <room>rooms\sunsetshimmer</room>
     <room>rooms\airplane</room>
->>>>>>> 1cea2d7929aa35951b6f62fde38eb36ee087912a
+    <room>rooms\stargazing</room>
+    <room>rooms\bikerace</room>
     <room>rooms\template</room>
   </rooms>
   <help>
