@@ -35,6 +35,29 @@ fallen = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(ambulance);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -52,49 +75,52 @@ fallen = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// 1 -&gt; forward, 0 -&gt; nowhere, -1 -&gt; backward
-var lDir = input_check_pressed(PLAYER.PLAYER1, INPUT.UP) - input_check_pressed(PLAYER.PLAYER1, INPUT.DOWN);
-var rDir = input_check_pressed(PLAYER.PLAYER2, INPUT.UP) - input_check_pressed(PLAYER.PLAYER2, INPUT.DOWN);
+            <string>if (!obj_sumo.fallen) {
+    // 1 -&gt; forward, 0 -&gt; nowhere, -1 -&gt; backward
+    var lDir = input_check_pressed(PLAYER.PLAYER1, INPUT.UP) - input_check_pressed(PLAYER.PLAYER1, INPUT.DOWN);
+    var rDir = input_check_pressed(PLAYER.PLAYER2, INPUT.UP) - input_check_pressed(PLAYER.PLAYER2, INPUT.DOWN);
+    
+    // Handle right side
+    if (rDir != 0 &amp;&amp; !fallen) {
+        // Position of left player
+        var lastX = x - lengthdir_x(offset, image_angle - 90);
+        var lastY = y - lengthdir_y(offset, image_angle - 90);
+        
+        image_angle += angleRate * rDir;
+        
+        x = lastX + lengthdir_x(offset, image_angle - 90);
+        y = lastY + lengthdir_y(offset, image_angle - 90);
+        
+        image_index = 2;
+    }
+    
+    // Handle left side
+    if (lDir != 0 &amp;&amp; !fallen) {
+        // Position of left player
+        var lastX = x - lengthdir_x(offset, image_angle + 90);
+        var lastY = y - lengthdir_y(offset, image_angle + 90);
+        
+        image_angle -= angleRate * lDir;
+        
+        x = lastX + lengthdir_x(offset, image_angle + 90);
+        y = lastY + lengthdir_y(offset, image_angle + 90);
+        
+        image_index = 1;
+    }
 
-// Handle right side
-if (rDir != 0 &amp;&amp; !fallen) {
-    // Position of left player
-    var lastX = x - lengthdir_x(offset, image_angle - 90);
-    var lastY = y - lengthdir_y(offset, image_angle - 90);
+    // Push the sumo
+    if ((lDir != 0 || rDir != 0) &amp;&amp; instance_place(x, y, obj_sumo) &amp;&amp; !fallen) {
+        obj_sumo.x += lengthdir_x(pushDistance, image_angle);
+        obj_sumo.y += lengthdir_y(pushDistance, image_angle);
+    }
     
-    image_angle += angleRate * rDir;
-    
-    x = lastX + lengthdir_x(offset, image_angle - 90);
-    y = lastY + lengthdir_y(offset, image_angle - 90);
-    
-    image_index = 2;
-}
-
-// Handle left side
-if (lDir != 0 &amp;&amp; !fallen) {
-    // Position of left player
-    var lastX = x - lengthdir_x(offset, image_angle + 90);
-    var lastY = y - lengthdir_y(offset, image_angle + 90);
-    
-    image_angle -= angleRate * lDir;
-    
-    x = lastX + lengthdir_x(offset, image_angle + 90);
-    y = lastY + lengthdir_y(offset, image_angle + 90);
-    
-    image_index = 1;
-}
-
-// Push the sumo
-if ((lDir != 0 || rDir != 0) &amp;&amp; instance_place(x, y, obj_sumo) &amp;&amp; !fallen) {
-    obj_sumo.x += lengthdir_x(pushDistance, image_angle);
-    obj_sumo.y += lengthdir_y(pushDistance, image_angle);
-}
-
-if (!instance_place(x, y, obj_sumo_ring))
-{
-    fallen = 1;
-    sprite_index = spr_sumo_players_fall;
-    depth = 5;
+    if (!instance_place(x, y, obj_sumo_ring) &amp;&amp; !fallen)
+    {
+        fallen = 1;
+        sprite_index = spr_sumo_players_fall;
+        depth = 5;
+        alarm[0] = room_speed * 2;
+    }
 }
 </string>
           </argument>
