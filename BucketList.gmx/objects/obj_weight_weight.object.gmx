@@ -51,40 +51,40 @@
             <kind>1</kind>
             <string>player1press = 0;
 player2press = 0;
-weightSpeed = 5;
+weightSpeed = 1;
 currentScore = 0;
-maxScore = 5; 
+maxScore = 10; 
 fails = 0;
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
+        <id>611</id>
+        <kind>6</kind>
         <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>240</string>
+            <kind>1</kind>
+            <string>reactionTime</string>
           </argument>
           <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>0</kind>
+            <string>20</string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -127,7 +127,7 @@ fails = 0;
           <argument>
             <kind>1</kind>
             <string>if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
-    if ((player1press == 1) || (alarm[0] &lt; 200)) {
+    if ((player1press == 1) || (alarm[0] &lt; 60 - reactionTime)) {
         if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
             y += weightSpeed;
             currentScore -= 1;
@@ -140,7 +140,7 @@ fails = 0;
     }
 }
 if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
-    if ((player2press == 1) || (alarm[0] &lt; 200)) {
+    if ((player2press == 1) || (alarm[0] &lt; 60 - reactionTime)) {
         if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
             y += weightSpeed;
             currentScore -= 1;
