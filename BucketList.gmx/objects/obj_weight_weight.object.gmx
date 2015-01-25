@@ -51,9 +51,9 @@
             <kind>1</kind>
             <string>player1press = 0;
 player2press = 0;
-weightSpeed = 1;
+weightSpeed = 10;
 currentScore = 0;
-maxScore = 10; 
+maxScore = 5; 
 fails = 0;
 </string>
           </argument>
