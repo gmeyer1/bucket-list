@@ -84,6 +84,29 @@ fails = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(list);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -126,41 +149,44 @@ fails = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
-    if ((player1press == 1) || (alarm[0] &lt; 60 - reactionTime)) {
-        if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
-            y += weightSpeed;
-            currentScore -= 1;
-            fails = 1;
+            <string>if (alarm[1] &lt;= 0) {
+    if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP) || input_check_pressed(PLAYER.PLAYER1, INPUT.A)) {
+        if ((player1press == 1) || (alarm[0] &lt; 60 - reactionTime)) {
+            if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
+                y += weightSpeed;
+                currentScore -= 1;
+                fails = 1;
+            }
+            player1press = 0;
         }
+        else {
+            player1press = 1;
+        }
+    }
+    if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP) || input_check_pressed(PLAYER.PLAYER2, INPUT.A)) {
+        if ((player2press == 1) || (alarm[0] &lt; 60 - reactionTime)) {
+            if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
+                y += weightSpeed;
+                currentScore -= 1;
+                fails = 1;
+            }
+            player2press = 0;
+        }
+        else {
+            player2press = 1;
+        }
+    }
+    if ((player1press == 1) &amp;&amp; (player2press == 1)) {
+        y-=weightSpeed;
+        currentScore += 1;
         player1press = 0;
+        player2press = 0; 
     }
-    else {
-        player1press = 1;
+    
+    if (currentScore &gt;= maxScore) {
+        alarm[1] = room_speed;
+        obj_lift_command.visible = false;
     }
-}
-if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
-    if ((player2press == 1) || (alarm[0] &lt; 60 - reactionTime)) {
-        if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
-            y += weightSpeed;
-            currentScore -= 1;
-            fails = 1;
-        }
-        player2press = 0;
-    }
-    else {
-        player2press = 1;
-    }
-}
-if ((player1press == 1) &amp;&amp; (player2press == 1)) {
-    y-=weightSpeed;
-    currentScore += 1;
-    player1press = 0;
-    player2press = 0; 
-  }  
-
-if (currentScore == maxScore) {
-//do win condition..
 }
 
 

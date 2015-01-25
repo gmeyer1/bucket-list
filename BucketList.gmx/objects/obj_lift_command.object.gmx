@@ -194,7 +194,7 @@ alarm[2] = obj_weight_weight.reactionTime;
             <string>draw_set_font(fnt_small);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_text(x,y,string(drawText));
+draw_text(room_width / 2, y, string(drawText));
 </string>
           </argument>
         </arguments>

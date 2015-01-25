@@ -52,10 +52,9 @@
   </views>
   <instances>
     <instance objName="obj_weight_player_1" x="64" y="152" name="inst_F5345381" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="352" y="224" name="inst_D280C9F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_weight_weight" x="32" y="56" name="inst_52F4CEED" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_debug_next" x="64" y="176" name="inst_CD3C89D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lift_command" x="160" y="72" name="inst_ACEBEEDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lift_command" x="152" y="40" name="inst_ACEBEEDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_weight_score" x="224" y="80" name="inst_C7B07897" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
