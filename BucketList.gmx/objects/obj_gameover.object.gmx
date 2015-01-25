@@ -74,6 +74,7 @@ showText = false;
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.4;
+audio_play_sound(snd_explode, 1000, false);
 </string>
           </argument>
         </arguments>
