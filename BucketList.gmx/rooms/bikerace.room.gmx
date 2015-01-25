@@ -97,6 +97,7 @@
     <instance objName="obj_bikerace_opponent" x="192" y="48" name="inst_4EF9F2BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bikerace_player" x="160" y="2016" name="inst_C583A5FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bikerace_opponent" x="160" y="1392" name="inst_0090FC3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bikerace_finish" x="0" y="64" name="inst_6353AB1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

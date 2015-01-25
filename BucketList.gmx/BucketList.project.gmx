@@ -61,6 +61,7 @@
       <sprite>sprites\spr_stargazing_star_sm</sprite>
       <sprite>sprites\spr_stargazing_player_1</sprite>
       <sprite>sprites\spr_stargazing_player_2</sprite>
+      <sprite>sprites\spr_stargazing_burning</sprite>
     </sprites>
     <sprites name="bikerace">
       <sprite>sprites\spr_bikerace_player</sprite>
@@ -68,6 +69,7 @@
       <sprite>sprites\spr_bikerace_bikewall</sprite>
       <sprite>sprites\spr_bikerace_opponent_fall</sprite>
       <sprite>sprites\spr_bikerace_player_fall</sprite>
+      <sprite>sprites\spr_bikerace_finish</sprite>
     </sprites>
     <sprites name="ambulance">
       <sprite>sprites\spr_ambulance</sprite>
@@ -183,6 +185,7 @@
       <object>objects\obj_bikerace_player</object>
       <object>objects\obj_bikerace_opponent</object>
       <object>objects\obj_bikerace_bikewall</object>
+      <object>objects\obj_bikerace_finish</object>
     </objects>
     <objects name="ambulance">
       <object>objects\obj_ambulance</object>
