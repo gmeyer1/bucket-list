@@ -81,9 +81,7 @@ finished = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (finished) {
-    // do stuff
-} else {
+            <string>if (!finished) {
     //Get the player's input
     key_right = input_check(PLAYER.PLAYER2, INPUT.RIGHT);//keyboard_check(vk_right);
     key_left = -input_check(PLAYER.PLAYER2, INPUT.LEFT);//keyboard_check(vk_left);
@@ -94,14 +92,14 @@ finished = false;
     move = key_left + key_right;
     hsp = movespeed * move;
     //Horizontal Collision
-    if (x &gt; room_width)
+    if (x &gt; room_width - 20)
     {
         if (key_right)
         {
             hsp = 0;
         }
     }
-    if (x &lt; 0)
+    if (x &lt; 0 + 20)
     {
         if (key_left == -1)
         {
@@ -135,8 +133,8 @@ finished = false;
     }
     
     if (instance_place(x, y, obj_bikerace_finish)) {
+        alarm[0] = room_speed * 2;
         finished = true;
-        alarm[0] = room_speed;
     }
 }
 </string>
