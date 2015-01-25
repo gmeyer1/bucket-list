@@ -76,6 +76,7 @@
     <background>background\bg_list</background>
     <background>background\bg_bikerace</background>
     <background>background\bg_avalanche</background>
+    <background>background\bg_plane</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
