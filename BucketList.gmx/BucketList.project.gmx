@@ -198,9 +198,18 @@
       <object>objects\obj_list_hand</object>
     </objects>
     <objects name="stargazing">
-      <object>objects\obj_stargazing_star_lg</object>
-      <object>objects\obj_stargazing_star_md</object>
-      <object>objects\obj_stargazing_star_sm</object>
+      <object>objects\obj_stargazing_star_lg_1</object>
+      <object>objects\obj_stargazing_star_lg_3</object>
+      <object>objects\obj_stargazing_star_lg_2</object>
+      <object>objects\obj_stargazing_star_lg_4</object>
+      <object>objects\obj_stargazing_star_md_1</object>
+      <object>objects\obj_stargazing_star_md_2</object>
+      <object>objects\obj_stargazing_star_md_3</object>
+      <object>objects\obj_stargazing_star_md_4</object>
+      <object>objects\obj_stargazing_star_sm_1</object>
+      <object>objects\obj_stargazing_star_sm_2</object>
+      <object>objects\obj_stargazing_star_sm_3</object>
+      <object>objects\obj_stargazing_star_sm_4</object>
       <object>objects\obj_stargazing_player_1</object>
       <object>objects\obj_stargazing_player_2</object>
       <object>objects\obj_stargazing_control</object>

@@ -3,7 +3,7 @@
   <caption></caption>
   <width>320</width>
   <height>240</height>
-  <vsnap>16</vsnap>
+  <vsnap>14</vsnap>
   <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
@@ -51,28 +51,24 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_stargazing_star_lg" x="48" y="16" name="inst_73489A61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_lg" x="256" y="64" name="inst_C371BA2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_lg" x="176" y="16" name="inst_2C31EFEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_lg" x="128" y="64" name="inst_874B7CE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_player_1" x="80" y="176" name="inst_050E02BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_player_2" x="224" y="176" name="inst_7EE8F387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="112" y="16" name="inst_781D45C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="80" y="32" name="inst_1CA82A3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="16" y="64" name="inst_82953ED4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="64" y="80" name="inst_B646FA5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="176" y="64" name="inst_F742C649" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="288" y="16" name="inst_A7D72505" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_control" x="0" y="0" name="inst_DB612EF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="256" y="32" name="inst_68FE9DCF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="16" y="16" name="inst_BD864F47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="64" y="48" name="inst_30E50C51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="96" y="64" name="inst_1BCBB8EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="208" y="16" name="inst_BB15431D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="144" y="32" name="inst_BE2EC7C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="288" y="64" name="inst_28FC0380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="224" y="48" name="inst_4167E061" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_sm" x="288" y="48" name="inst_E199B134" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_player_1" x="80" y="180" name="inst_050E02BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_player_2" x="224" y="180" name="inst_7EE8F387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_sm_1" x="176" y="56" name="inst_52184580" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_sm_2" x="208" y="28" name="inst_2857B423" locked="0" code="" scaleX="0.100000001490116" scaleY="0.100000001490116" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_sm_2" x="224" y="42" name="inst_43ED9CFF" locked="0" code="" scaleX="0.100000001490116" scaleY="0.100000001490116" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_sm_2" x="208" y="42" name="inst_38B8D216" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_sm_3" x="256" y="42" name="inst_451A78D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_md_1" x="16" y="14" name="inst_7447AC26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_md_2" x="32" y="56" name="inst_612C66C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_control" x="16" y="210" name="inst_B00BC32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_lg_1" x="288" y="14" name="inst_70DE415B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_lg_2" x="16" y="84" name="inst_137204B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_lg_3" x="224" y="70" name="inst_02A9BC91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_lg_4" x="176" y="14" name="inst_D72BE7A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_md_3" x="80" y="42" name="inst_45112D3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_md_3" x="64" y="56" name="inst_9C243A56" locked="0" code="" scaleX="0.100000001490116" scaleY="0.100000001490116" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_sm_4" x="112" y="70" name="inst_A9C19019" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_star_md_4" x="128" y="28" name="inst_59AC066F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
