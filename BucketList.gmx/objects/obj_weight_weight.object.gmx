@@ -25,7 +25,102 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>1/10</string>
+            <string>1/20</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>player1press</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>player2press</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>-1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y += 2
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,43 +142,72 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
-    //Alarm 0 is player 1, alarm 1 is player 2
-    //Alarm 0 prevents player 1 from rapidly pressing it.
-    if alarm[0] == -1 {
-        alarm[0] = 30;
-        alarm[1] = 30;
+            <string>if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
+    if (player2press == 1) {
+        y -= 5;
+        player2press = 0;
+        alarm[0] = -1;
+    }
+    else if (player1press == 1) {
+        y += 2;
     }
     else {
-    //see if this makes it too hard.
+        player1press = 1;
+        alarm[0] = 1/2;
+    }
+}
+if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
+    if (player1press == 1) {
+        y -= 5;
+        player1press = 0;
+        alarm[0] = -1;
+    }
+    else if (player2press == 1) {
         y += 2;
+    }
+    else {
+        player2press = 1;
+        alarm[0] = 1/2;
+    }
+}        
+    
+/*
+if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
+    //Alarm 0 is player 1, alarm 1 is player 2
+    //Alarm 0 prevents player 1 from rapidly pressing it.
+    if (alarm[0] == -1) {
+        alarm[0] = 60;
+        alarm[1] = 6;
+    }
+    if (alarm[0] != -1) {
+    //see if this makes it too hard.
+        y += 1;
     }
  }
  if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
     //if alarm wasn't set, he pressed to early and it falls.
-    //else, it goes up.
+    //else, it goes up and all timers reset.
     if alarm[1] != -1 {
-        obj_weight_weight.y -= 2;
+        obj_weight_weight.y -= 5;
         alarm[0] = -1;
         alarm[1] = -1;
         }
     else {
-        obj_weight_weight.y += 2;
+        obj_weight_weight.y += 1;
         }
  }
 if (y &gt;= 240){
      vspeed = 0;
      }
 else if ((vspeed == 0) &amp;&amp; (y &lt; 240)){
-    vspeed = 1/10;
+    vspeed = 1/20;
     }
 if (y &lt;= 204) {
  //win
  obj_weight_weight.y = 50;
  vspeed = 0;
  }
-
-    
+ */  
 </string>
           </argument>
         </arguments>
