@@ -55,4 +55,3 @@ else {
 return 40 * (n0+n1+n2);
 
 
-

@@ -50,6 +50,9 @@
       <sprite>sprites\spr_player1_start</sprite>
       <sprite>sprites\spr_player2_start</sprite>
     </sprites>
+    <sprites name="list">
+      <sprite>sprites\spr_list_hand</sprite>
+    </sprites>
     <sprites name="stargazing">
       <sprite>sprites\spr_stargazing_star_lg</sprite>
       <sprite>sprites\spr_stargazing_star_md</sprite>
@@ -70,6 +73,7 @@
     <background>background\bg_grass</background>
     <background>background\bg_bank</background>
     <background>background\bg_childhood</background>
+    <background>background\bg_list</background>
     <background>background\bg_bikerace</background>
     <background>background\bg_avalanche</background>
   </backgrounds>
@@ -89,6 +93,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_list</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_screen_control</object>
@@ -145,6 +150,10 @@
       <object>objects\obj_airplane</object>
       <object>objects\obj_airplane_countdown</object>
     </objects>
+    <objects name="list">
+      <object>objects\obj_list_control</object>
+      <object>objects\obj_list_hand</object>
+    </objects>
     <objects name="stargazing">
       <object>objects\obj_stargazing_star_lg</object>
       <object>objects\obj_stargazing_star_md</object>
@@ -156,6 +165,7 @@
   <rooms name="rooms">
     <room>rooms\start</room>
     <room>rooms\title</room>
+    <room>rooms\list</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
