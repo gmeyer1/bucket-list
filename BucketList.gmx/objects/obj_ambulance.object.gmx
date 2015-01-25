@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = room_speed * 2;
+            <string>alarm[0] = room_speed;
 offscreen = false;
 </string>
           </argument>
@@ -49,7 +49,7 @@ offscreen = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(list);
+            <string>room_goto(ds_list_find_value(global.levels, global.level - 1));
 </string>
           </argument>
         </arguments>
@@ -72,7 +72,7 @@ offscreen = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = -3;
+            <string>hspeed = -4;
 image_speed = 0.2;
 </string>
           </argument>
@@ -98,7 +98,7 @@ image_speed = 0.2;
             <kind>1</kind>
             <string>if (!offscreen &amp;&amp; x &lt; 0) {
     offscreen = true;
-    alarm[1] = room_speed * 2;
+    alarm[1] = room_speed;
 }
 </string>
           </argument>

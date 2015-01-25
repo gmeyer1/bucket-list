@@ -62,8 +62,7 @@ hsp = movespeed * move;
 
 if (y&lt;0)
 {
-    //DO END CODE HERE
-    room_restart();
+    room_goto(ambulance);
 }
 if (place_meeting(x,y,obj_avalanche_rock) || place_meeting(x,y,obj_avalanche_tree))
 {

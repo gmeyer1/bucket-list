@@ -33,9 +33,9 @@ if (bag != noone &amp;&amp; bag.x &gt; x + 10) {
         instance_destroy();
         obj_money_counter.count += 1;
         
-        if (obj_money_counter.count &gt;= obj_money_counter.maxCount) {
-            // YOU WIN. We should do something here.
-            
+        if (obj_money_counter.count &gt;= obj_money_counter.maxCount &amp;&amp; !obj_money_control.finished) {
+            obj_money_control.alarm[1] = room_speed * 2;
+            obj_money_control.finished = true;
         }
     }
 }

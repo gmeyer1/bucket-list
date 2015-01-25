@@ -209,7 +209,7 @@ var left = textX - width / 2;
 var right = textX + width / 2 + 4;
 
 if (instance_exists(obj_list_hand) &amp;&amp; obj_list_hand.x &gt; left) {
-    draw_set_alpha(oldAlpha);
+    draw_set_alpha(lineAlpha);
     draw_line_width_colour(
         left,
         textY,

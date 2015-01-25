@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -98,7 +98,14 @@ global.timeLeft = room_speed * 300;
           <argument>
             <kind>1</kind>
             <string>draw_set_font(fnt_timer);
-draw_set_colour(c_black);
+
+if (room == stargazing) {
+    draw_set_colour(c_white);
+} else {
+    draw_set_colour(c_black);
+}
+
+
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_right);
 
@@ -111,7 +118,9 @@ var millis = floor((seconds * 1000) % 1000);
 var secondString = string_lpad(string(floor(seconds)), 2, '0');
 var milliString = string_lpad(string(millis), 3, '0');
 
-draw_text(320, 240, string(minutes) + ":" + secondString + "." + milliString);
+draw_text(view_xview[0] + 320,
+          view_yview[0] + 240,
+          string(minutes) + ":" + secondString + "." + milliString);
 </string>
           </argument>
         </arguments>
