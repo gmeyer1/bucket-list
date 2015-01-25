@@ -28,7 +28,7 @@
             <string>var bag = instance_place(x, y, obj_money_bag);
 
 // Bag made it into the truck and is not visible
-if (bag != noone &amp;&amp; bag.x &gt; x + 40) {
+if (bag != noone &amp;&amp; bag.x &gt; x + 10) {
     with (bag) {
         instance_destroy();
         obj_money_counter.count += 1;
