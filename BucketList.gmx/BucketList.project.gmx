@@ -55,6 +55,7 @@
     <background>background\bg_sumo</background>
     <background>background\bg_grass</background>
     <background>background\bg_bank</background>
+    <background>background\bg_childhood</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
