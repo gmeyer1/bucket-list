@@ -133,6 +133,7 @@
     <object>objects\obj_test</object>
     <object>objects\obj_debug_next</object>
     <object>objects\obj_timer</object>
+    <object>objects\obj_credits_controller</object>
     <objects name="die">
       <object>objects\obj_die</object>
       <object>objects\obj_die_controller</object>
@@ -243,6 +244,7 @@
     <room>rooms\stargazing</room>
     <room>rooms\bikerace</room>
     <room>rooms\ambulance</room>
+    <room>rooms\credits</room>
     <room>rooms\template</room>
   </rooms>
   <help>
