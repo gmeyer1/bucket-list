@@ -141,6 +141,8 @@
       <object>objects\obj_weight_player_1</object>
       <object>objects\obj_weight_player_2</object>
       <object>objects\obj_weight_weight</object>
+      <object>objects\obj_lift_command</object>
+      <object>objects\obj_weight_score</object>
     </objects>
     <objects name="sunsetshimmer">
       <object>objects\obj_sunset_makeoutpoint</object>
