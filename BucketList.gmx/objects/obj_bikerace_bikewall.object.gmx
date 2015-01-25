@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>//variables
 vspeed = -2;
+image_speed = 0.15;
 </string>
           </argument>
         </arguments>
@@ -54,6 +55,7 @@ vspeed = -2;
    
 if (place_meeting(x,y,obj_bikerace_player))
 {
+    obj_bikerace_player.sprite_index = spr_bikerace_player_fall;
     room_restart();
 }
 </string>
