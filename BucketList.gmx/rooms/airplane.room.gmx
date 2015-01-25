@@ -54,7 +54,7 @@
     <instance objName="obj_airplane_player_1" x="80" y="144" name="inst_5A07C711" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_airplane_player_2" x="240" y="144" name="inst_40B422E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_airplane" x="160" y="144" name="inst_E4FFF37B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_airplane_countdown" x="160" y="48" name="inst_85508F53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_airplane_countdown" x="160" y="32" name="inst_85508F53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
