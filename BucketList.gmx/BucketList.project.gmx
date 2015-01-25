@@ -64,6 +64,8 @@
       <sprite>sprites\spr_bikerace_player</sprite>
       <sprite>sprites\spr_bikerace_opponent</sprite>
       <sprite>sprites\spr_bikerace_bikewall</sprite>
+      <sprite>sprites\spr_bikerace_opponent_fall</sprite>
+      <sprite>sprites\spr_bikerace_player_fall</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">

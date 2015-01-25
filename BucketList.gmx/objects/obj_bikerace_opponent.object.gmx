@@ -3,7 +3,7 @@
   <spriteName>spr_bikerace_opponent</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//variables
-vspeed = 1;
+vspeed = -2;
+image_speed = 0.2;
 </string>
           </argument>
         </arguments>
@@ -49,12 +50,14 @@ vspeed = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y&gt;room_height)
+            <string>if (y&lt;-40)
    instance_destroy()
    
 if (place_meeting(x,y,obj_bikerace_player))
 {
-    room_restart();
+    obj_bikerace_player.vspeed = 0;
+    sprite_index = spr_bikerace_opponent_fall;
+    vspeed = 0;
 }
 </string>
           </argument>
