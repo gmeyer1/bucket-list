@@ -75,7 +75,7 @@ alarm[1] = 0;
             <kind>1</kind>
             <string>image_index = 2;
 
-alarm[1] = 4;
+alarm[1] = 6;
 </string>
           </argument>
         </arguments>
