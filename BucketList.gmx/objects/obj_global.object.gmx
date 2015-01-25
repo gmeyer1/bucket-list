@@ -51,7 +51,7 @@ ds_map_add(global.names, weightlifting, "Get buff");
 ds_map_add(global.names, sunsetshimmer, "Experience a sunrise");
 ds_map_add(global.names, airplane, "Travel to a new place");
 ds_map_add(global.names, stargazing, "Go stargazing");
-ds_map_add(global.names, stargazing, "Join a bike marathon");
+ds_map_add(global.names, bikerace, "Join a bike marathon");
 
 global.levels = ds_list_create();
 ds_list_add(global.levels, makemoney);
