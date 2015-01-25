@@ -31,6 +31,8 @@ stepTime = room_speed * 0.3; // How long to wait between taking steps
 pushDistance = 5; // Pixels to push player
 
 alarm[0] = stepTime;
+image_speed = 0;
+fallen = 0;
 </string>
           </argument>
         </arguments>
@@ -63,7 +65,7 @@ var facingY = lengthdir_y(1, image_angle);
 var dir = -offsetX * facingY + offsetY * facingX;
 
 // Right step
-if (dir &lt; 0) {
+if (dir &lt; 0  &amp;&amp; !fallen) {
     // Position of left foot
     var lastX = x - lengthdir_x(offset, image_angle - 90);
     var lastY = y - lengthdir_y(offset, image_angle - 90);
@@ -73,8 +75,10 @@ if (dir &lt; 0) {
     x = lastX + lengthdir_x(offset, image_angle - 90);
     y = lastY + lengthdir_y(offset, image_angle - 90);
     
+    image_index = 1;
+    
 // Left step
-} else {
+} else if (!fallen) {
     // Position of right foot
     var lastX = x - lengthdir_x(offset, image_angle + 90);
     var lastY = y - lengthdir_y(offset, image_angle + 90);
@@ -83,15 +87,24 @@ if (dir &lt; 0) {
     
     x = lastX + lengthdir_x(offset, image_angle + 90);
     y = lastY + lengthdir_y(offset, image_angle + 90);
+    
+    image_index = 2;
 }
 
 // Push back players
-if (instance_place(x, y, obj_sumo_players)) {
+if (instance_place(x, y, obj_sumo_players) &amp;&amp; !fallen) {
     obj_sumo_players.x += lengthdir_x(pushDistance, image_angle);
     obj_sumo_players.y += lengthdir_y(pushDistance, image_angle);
 }
 
 alarm[0] = stepTime;
+
+if (!instance_place(x, y, obj_sumo_ring))
+{
+    fallen = 1;
+    sprite_index = spr_sumo_fall;
+    depth = 5;
+}
 </string>
           </argument>
         </arguments>

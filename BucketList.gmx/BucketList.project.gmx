@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\explosion</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprites name="makemoney">
       <sprite>sprites\spr_money_player_1</sprite>
@@ -31,6 +32,9 @@
     <sprites name="sumo">
       <sprite>sprites\spr_sumo</sprite>
       <sprite>sprites\spr_sumo_players</sprite>
+      <sprite>sprites\spr_sumo_fall</sprite>
+      <sprite>sprites\spr_sumo_players_fall</sprite>
+      <sprite>sprites\spr_sumo_ring</sprite>
     </sprites>
     <sprites name="weightlifting">
       <sprite>sprites\spr_weight_player_1</sprite>
@@ -113,6 +117,7 @@
     <object>objects\obj_global</object>
     <object>objects\obj_test</object>
     <object>objects\obj_debug_next</object>
+    <object>objects\obj_explosion</object>
     <object>objects\obj_timer</object>
     <objects name="title">
       <object>objects\obj_player1_start</object>
@@ -147,13 +152,14 @@
     </objects>
     <objects name="sumo">
       <object>objects\obj_sumo</object>
+      <object>objects\obj_sumo_ring</object>
       <object>objects\obj_sumo_players</object>
     </objects>
     <objects name="weightlifting">
       <object>objects\obj_weight_player_1</object>
       <object>objects\obj_weight_player_2</object>
-      <object>objects\obj_weight_weight</object>
       <object>objects\obj_lift_command</object>
+      <object>objects\obj_weight_weight</object>
       <object>objects\obj_weight_score</object>
     </objects>
     <objects name="sunsetshimmer">
@@ -201,6 +207,7 @@
     <room>rooms\stargazing</room>
     <room>rooms\bikerace</room>
     <room>rooms\ambulance</room>
+    <room>rooms\explode</room>
     <room>rooms\template</room>
   </rooms>
   <help>
