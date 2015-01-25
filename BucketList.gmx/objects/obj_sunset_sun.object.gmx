@@ -57,45 +57,20 @@ vspeed = risespeed;
         audio_play_sound(dingdong, 100, false);
         room_goto(list);
     }
-    if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
+    if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP) ||
+        input_check_pressed(PLAYER.PLAYER1, INPUT.DOWN) ||
+        input_check_pressed(PLAYER.PLAYER1, INPUT.LEFT) ||
+        input_check_pressed(PLAYER.PLAYER1, INPUT.RIGHT) ||
+        input_check_pressed(PLAYER.PLAYER1, INPUT.A) ||
+        input_check_pressed(PLAYER.PLAYER2, INPUT.UP) ||
+        input_check_pressed(PLAYER.PLAYER2, INPUT.DOWN) ||
+        input_check_pressed(PLAYER.PLAYER2, INPUT.LEFT) ||
+        input_check_pressed(PLAYER.PLAYER2, INPUT.RIGHT) ||
+        input_check_pressed(PLAYER.PLAYER2, INPUT.A)) {
+        
         vspeed = fallspeed;
         image_index = 1;
-     }
-    if (input_check_pressed(PLAYER.PLAYER1, INPUT.DOWN)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }     
-     if (input_check_pressed(PLAYER.PLAYER1, INPUT.LEFT)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }     
-     if (input_check_pressed(PLAYER.PLAYER1, INPUT.RIGHT)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }   
-     if (input_check_pressed(PLAYER.PLAYER1, INPUT.A)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }   
-     if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }
-     if (input_check_pressed(PLAYER.PLAYER2, INPUT.DOWN)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }     
-     if (input_check_pressed(PLAYER.PLAYER2, INPUT.LEFT)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }     
-     if (input_check_pressed(PLAYER.PLAYER2, INPUT.RIGHT)) {
-        vspeed = fallspeed;
-        image_index = 1;
-     }   
-     if (input_check_pressed(PLAYER.PLAYER2, INPUT.A)) {
-        vspeed = fallspeed;
-        image_index = 1;
+        if (!audio_is_playing(snd_sad)) audio_play_sound(snd_sad, 100, false);
      }
 }
 if (vspeed &gt; 0) {

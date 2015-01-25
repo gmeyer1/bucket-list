@@ -9,6 +9,7 @@
     <sound>sound\snd_scream</sound>
     <sound>sound\snd_explode</sound>
     <sound>sound\snd_ambulance</sound>
+    <sound>sound\snd_sad</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite1</sprite>
