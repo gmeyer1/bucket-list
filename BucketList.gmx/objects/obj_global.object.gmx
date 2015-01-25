@@ -61,8 +61,7 @@ ds_list_add(global.levels, weightlifting);
 ds_list_add(global.levels, sunsetshimmer);
 ds_list_add(global.levels, airplane);
 
-global.level = 5;
-global.toCross = true;
+global.level = 0;
 
 </string>
           </argument>
