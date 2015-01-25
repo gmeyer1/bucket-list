@@ -115,13 +115,13 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
-    <room>rooms\airplane</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
     <room>rooms\childhood</room>
     <room>rooms\sumo</room>
     <room>rooms\weightlifting</room>
+    <room>rooms\airplane</room>
     <room>rooms\template</room>
   </rooms>
   <help>
