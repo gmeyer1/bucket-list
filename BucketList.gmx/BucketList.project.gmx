@@ -38,7 +38,7 @@
     <sprites name="airplane">
       <sprite>sprites\spr_airplane_player_1</sprite>
       <sprite>sprites\spr_airplane_player_2</sprite>
-      <sprite>sprites\spr_airplane_airplane</sprite>
+      <sprite>sprites\spr_airplane</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -53,6 +53,14 @@
     <script>scripts\input_check.gml</script>
     <script>scripts\input_check_released.gml</script>
     <script>scripts\input_check_pressed.gml</script>
+    <scripts name="SimplexNoise">
+      <script>scripts\fractional_brownian_motion.gml</script>
+      <script>scripts\simplex_init.gml</script>
+      <script>scripts\simplex_grad.gml</script>
+      <script>scripts\simplex_noise.gml</script>
+      <script>scripts\simplex_cleanup.gml</script>
+      <script>scripts\simplex_set_perm.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
@@ -98,11 +106,13 @@
     <objects name="airplane">
       <object>objects\obj_airplane_player_1</object>
       <object>objects\obj_airplane_player_2</object>
-      <object>objects\obj_airplane_airplane</object>
+      <object>objects\obj_airplane</object>
+      <object>objects\obj_airplane_countdown</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
+    <room>rooms\airplane</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
@@ -110,7 +120,6 @@
     <room>rooms\sumo</room>
     <room>rooms\weightlifting</room>
     <room>rooms\template</room>
-    <room>rooms\airplane</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
