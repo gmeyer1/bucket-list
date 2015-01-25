@@ -30,6 +30,7 @@ hsp = 0;
 movespeed = 5;
 hitspeed = -3;
 image_speed = 0;
+failed = false;
 </string>
           </argument>
         </arguments>
@@ -64,52 +65,63 @@ if (y&lt;0)
 {
     room_goto(ambulance);
 }
-if (place_meeting(x,y,obj_avalanche_rock) || place_meeting(x,y,obj_avalanche_tree))
-{
-    hsp = 0;
-    vspeed = hitspeed;
-    image_index = 1;
-}
 
-//Horizontal Collision
-if (x &gt; room_width)
-{
-    //if (key_right)
-        //hsp = 0;
-    hsp = 0;
-    vspeed = hitspeed;
-    image_index = 1;
-}
-if (x &lt; 0)
-{
-    //if (key_left == -1)
-        //hsp = 0;
-    hsp = 0;
-    vspeed = hitspeed;
-    image_index = 1;
-}
-if (instance_place(x, y, obj_avalanche_player_2))
-{
-    hsp = 0;
-    vspeed = hitspeed;
-    image_index = 1;
-    //if (!key_right)
-        //x += hsp;
-}
-else
-    x += hsp;
+if (!failed) {
+    if (place_meeting(x,y,obj_avalanche_rock) || place_meeting(x,y,obj_avalanche_tree))
+    {
+        hsp = 0;
+        vspeed = hitspeed;
+        image_index = 1;
+        failed = true;
+        audio_play_sound(snd_scream, 100, false);
+    }
     
-if (move == 1 &amp;&amp; vspeed == 0)
-{
-    image_angle = 20;
-}
-if (move == -1 &amp;&amp; vspeed == 0)
-{
-    image_angle = -20;
-}
-if (move == 0 &amp;&amp; vspeed == 0)
-{
-    image_angle = 0;
+    //Horizontal Collision
+    if (x &gt; room_width)
+    {
+        //if (key_right)
+            //hsp = 0;
+        hsp = 0;
+        vspeed = hitspeed;
+        image_index = 1;
+        failed = true;
+        audio_play_sound(snd_scream, 100, false);
+    }
+    if (x &lt; 0)
+    {
+        //if (key_left == -1)
+            //hsp = 0;
+        hsp = 0;
+        vspeed = hitspeed;
+        image_index = 1;
+        failed = true;
+        audio_play_sound(snd_scream, 100, false);
+    }
+    if (instance_place(x, y, obj_avalanche_player_2))
+    {
+        hsp = 0;
+        vspeed = hitspeed;
+        image_index = 1;
+        //if (!key_right)
+            //x += hsp;
+        failed = true;
+        audio_play_sound(snd_scream, 100, false);
+    }
+    else
+        x += hsp;
+        
+    if (move == 1 &amp;&amp; vspeed == 0)
+    {
+        image_angle = 20;
+    }
+    if (move == -1 &amp;&amp; vspeed == 0)
+    {
+        image_angle = -20;
+    }
+    if (move == 0 &amp;&amp; vspeed == 0)
+    {
+        image_angle = 0;
+    }
 }
 </string>
           </argument>

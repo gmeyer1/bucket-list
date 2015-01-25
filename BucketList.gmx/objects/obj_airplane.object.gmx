@@ -102,6 +102,7 @@ if (failed) {
     if (abs(image_angle) &gt; 40) {
         failed = true;
         obj_airplane_countdown.visible = false;
+        audio_play_sound(snd_scream, 100, false);
     }
     
     image_angle += angleDir * maxTurnRate;

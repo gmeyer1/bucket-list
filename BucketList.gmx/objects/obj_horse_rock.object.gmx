@@ -52,6 +52,7 @@
    
 if (place_meeting(x,y,obj_horse_player_1) || place_meeting(x,y,obj_horse_player_2))
 {
+    audio_play_sound(snd_scream, 100, false);
     room_goto(ambulance);
 }
 </string>
