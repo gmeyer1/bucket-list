@@ -78,6 +78,8 @@
     <background>background\bg_bikerace</background>
     <background>background\bg_avalanche</background>
     <background>background\bg_plane</background>
+    <background>background\bg_stargazing_sky</background>
+    <background>background\bg_stargazing_ground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
