@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="7" enumb="2">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,49 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enum PLAYER {
-    PLAYER1,
-    PLAYER2
-};
+            <string>enabled = true;
 
-enum INPUT {
-    RIGHT,
-    LEFT,
-    UP,
-    DOWN,
-    A
-};
-
-
-randomize();
-
-global.names = ds_map_create();
-ds_map_add(global.names, makemoney, "Become a millionare");
-ds_map_add(global.names, horseriding, "Ride a horse");
-ds_map_add(global.names, avalanche, "Climb a mountain");
-ds_map_add(global.names, childhood, "Relive childhood");
-ds_map_add(global.names, sumo, "Take up a new sport");
-ds_map_add(global.names, weightlifting, "Get buff");
-ds_map_add(global.names, sunsetshimmer, "Experience a sunrise");
-ds_map_add(global.names, airplane, "Travel to a new place");
-
-global.levels = ds_list_create();
-ds_list_add(global.levels, makemoney);
-ds_list_add(global.levels, horseriding);
-ds_list_add(global.levels, avalanche);
-ds_list_add(global.levels, childhood);
-ds_list_add(global.levels, sumo);
-ds_list_add(global.levels, weightlifting);
-ds_list_add(global.levels, sunsetshimmer);
-ds_list_add(global.levels, airplane);
-
-global.level = 0;
+event_user(0);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="82">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -84,13 +50,13 @@ global.level = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>if (enabled) global.timeLeft--;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="78">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -107,7 +73,45 @@ global.level = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>// Reset timer
+global.timeLeft = room_speed * 300;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fnt_timer);
+draw_set_colour(c_black);
+draw_set_valign(fa_bottom);
+draw_set_halign(fa_right);
+
+var framesPerMinute = room_speed * 60;
+
+var minutes = floor(global.timeLeft / framesPerMinute);
+var seconds = (global.timeLeft % framesPerMinute) / room_speed;
+var millis = floor((seconds * 1000) % 1000);
+
+var secondString = string_lpad(string(floor(seconds)), 2, '0');
+var milliString = string_lpad(string(millis), 3, '0');
+
+draw_text(320, 240, string(minutes) + ":" + secondString + "." + milliString);
 </string>
           </argument>
         </arguments>

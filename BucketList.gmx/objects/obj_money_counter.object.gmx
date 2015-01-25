@@ -51,10 +51,11 @@ maxCount = 25;
             <kind>1</kind>
             <string>draw_sprite(sprite_index, image_index, x, y);
 
+draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_small);
 draw_set_colour(c_black);
-draw_text(x + 44, y, string(count) + " / " + string(maxCount));
+draw_text(x + 18, y, string(count) + " / " + string(maxCount));
 </string>
           </argument>
         </arguments>

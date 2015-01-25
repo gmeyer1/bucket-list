@@ -65,6 +65,9 @@
       <sprite>sprites\spr_bikerace_opponent</sprite>
       <sprite>sprites\spr_bikerace_bikewall</sprite>
     </sprites>
+    <sprites name="ambulance">
+      <sprite>sprites\spr_ambulance</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
@@ -78,12 +81,14 @@
     <background>background\bg_bikerace</background>
     <background>background\bg_avalanche</background>
     <background>background\bg_plane</background>
+    <background>background\bg_ambulance</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\input_check.gml</script>
     <script>scripts\input_check_released.gml</script>
     <script>scripts\input_check_pressed.gml</script>
+    <script>scripts\string_lpad.gml</script>
     <scripts name="SimplexNoise">
       <script>scripts\fractional_brownian_motion.gml</script>
       <script>scripts\simplex_init.gml</script>
@@ -95,6 +100,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_timer</font>
     <font>fonts\fnt_list</font>
   </fonts>
   <objects name="objects">
@@ -102,6 +108,7 @@
     <object>objects\obj_global</object>
     <object>objects\obj_test</object>
     <object>objects\obj_debug_next</object>
+    <object>objects\obj_timer</object>
     <objects name="title">
       <object>objects\obj_player1_start</object>
       <object>objects\obj_player2_start</object>
@@ -168,6 +175,9 @@
       <object>objects\obj_bikerace_opponent</object>
       <object>objects\obj_bikerace_bikewall</object>
     </objects>
+    <objects name="ambulance">
+      <object>objects\obj_ambulance</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
@@ -183,6 +193,7 @@
     <room>rooms\airplane</room>
     <room>rooms\stargazing</room>
     <room>rooms\bikerace</room>
+    <room>rooms\ambulance</room>
     <room>rooms\template</room>
   </rooms>
   <help>

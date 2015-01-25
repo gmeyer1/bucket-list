@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>started = false;
+obj_timer.visible = false;
+obj_timer.enabled = false;
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>with (obj_timer) {
+    event_user(0);
+    visible = true;
+    enabled = true;
+}
+room_goto(list);
 </string>
           </argument>
         </arguments>
