@@ -82,7 +82,7 @@ event_user(0);
           <argument>
             <kind>1</kind>
             <string>// Reset timer
-global.timeLeft = room_speed * 300;
+global.timeLeft = room_speed * 334;
 </string>
           </argument>
         </arguments>
@@ -107,7 +107,7 @@ global.timeLeft = room_speed * 300;
             <kind>1</kind>
             <string>draw_set_font(fnt_timer);
 
-if (room == stargazing) {
+if (room == stargazing || room == intro) {
     draw_set_colour(c_white);
 } else {
     draw_set_colour(c_black);

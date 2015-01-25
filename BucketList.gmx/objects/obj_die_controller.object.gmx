@@ -53,6 +53,7 @@ obj_timer.enabled = false;
           <argument>
             <kind>1</kind>
             <string>dodraw = 1;
+audio_play_sound(snd_success, 10000, false);
 </string>
           </argument>
         </arguments>
@@ -91,8 +92,46 @@ draw_set_color(c_black);
 
 if (dodraw)
 {
-    draw_text(x, y, "Congratulations!")
+    draw_text(x, y, "Congratulations! You died happy!");
+    draw_text(x, y + 12, "Your time was:");
+
+    var framesPerMinute = room_speed * 60;
+    
+    var minutes = floor(global.timeLeft / framesPerMinute);
+    var seconds = (global.timeLeft % framesPerMinute) / room_speed;
+    var millis = floor((seconds * 1000) % 1000);
+    
+    var secondString = string_lpad(string(floor(seconds)), 2, '0');
+    var milliString = string_lpad(string(millis), 3, '0');
+    
+    draw_text(x,
+              y + 20,
+              string(minutes) + ":" + secondString + "." + milliString);
+    draw_text(x, y + 32, "Press R to play again.");
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(title);
 </string>
           </argument>
         </arguments>

@@ -28,7 +28,7 @@
             <string>image_speed = 0;
 currframe = 0;
 
-alarm[0] = 90;
+alarm[0] = 150;
 
 draw_set_colour(c_white);
 text = "Announcer: The world is going to 
