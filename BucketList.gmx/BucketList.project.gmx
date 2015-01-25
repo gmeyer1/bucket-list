@@ -64,6 +64,8 @@
       <sprite>sprites\spr_bikerace_player</sprite>
       <sprite>sprites\spr_bikerace_opponent</sprite>
       <sprite>sprites\spr_bikerace_bikewall</sprite>
+      <sprite>sprites\spr_bikerace_opponent_fall</sprite>
+      <sprite>sprites\spr_bikerace_player_fall</sprite>
     </sprites>
     <sprites name="ambulance">
       <sprite>sprites\spr_ambulance</sprite>
@@ -82,6 +84,8 @@
     <background>background\bg_avalanche</background>
     <background>background\bg_plane</background>
     <background>background\bg_ambulance</background>
+    <background>background\bg_stargazing_sky</background>
+    <background>background\bg_stargazing_ground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -148,6 +152,8 @@
       <object>objects\obj_weight_player_1</object>
       <object>objects\obj_weight_player_2</object>
       <object>objects\obj_weight_weight</object>
+      <object>objects\obj_lift_command</object>
+      <object>objects\obj_weight_score</object>
     </objects>
     <objects name="sunsetshimmer">
       <object>objects\obj_sunset_makeoutpoint</object>

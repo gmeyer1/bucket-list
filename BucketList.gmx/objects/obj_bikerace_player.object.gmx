@@ -3,7 +3,7 @@
   <spriteName>spr_bikerace_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -31,6 +31,10 @@ accspeed = -1;
 decspeed = +0.05;
 hsp = 0;
 movespeed = 2;
+
+image_speed = 0;
+
+currframe = 1;
 </string>
           </argument>
         </arguments>
@@ -81,7 +85,7 @@ if (x &lt; 0)
 x += hsp;
 
 vmove = key_peddle;
-vspeed = vspeed + (vmove * accspeed) + decspeed;
+vspeed += (vmove * accspeed) + decspeed;
 if (vspeed &lt; -5)
 {
     vspeed = -5;
@@ -89,6 +93,18 @@ if (vspeed &lt; -5)
 if (vspeed &gt; 0)
 {
     vspeed = 0;
+    image_index = 0;
+}
+
+if (view_yview[0] &gt; 0)
+    view_yview[0] = y - 170
+    
+if (vmove) {
+    image_index = currframe;
+    if (currframe == 1)
+        currframe = 2;
+    else
+        currframe = 1;
 }
 </string>
           </argument>
