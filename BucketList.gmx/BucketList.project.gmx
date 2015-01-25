@@ -180,6 +180,7 @@
       <object>objects\obj_stargazing_star_sm</object>
       <object>objects\obj_stargazing_player_1</object>
       <object>objects\obj_stargazing_player_2</object>
+      <object>objects\obj_stargazing_control</object>
     </objects>
     <objects name="bikerace">
       <object>objects\obj_bikerace_player</object>

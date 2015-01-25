@@ -79,16 +79,20 @@ obj_stargazing_star_md.hspeed = 1;
             <string>if (y&gt;room_height)
    instance_destroy()
    
-if (place_meeting(x,y,obj_stargazing_player_1))
+if (place_meeting(x,y,obj_stargazing_player_1) &amp;&amp; !obj_stargazing_player_1.dead)
 {
     obj_stargazing_player_1.sprite_index = spr_stargazing_burning;
     obj_stargazing_player_1.image_speed = 0.2;
+    obj_stargazing_player_1.dead = true;
+    obj_stargazing_control.alarm[0] = room_speed * 2;
 }
 
-if (place_meeting(x,y,obj_stargazing_player_2))
+if (place_meeting(x,y,obj_stargazing_player_2) &amp;&amp; !obj_stargazing_player_2.dead)
 {
     obj_stargazing_player_2.sprite_index = spr_stargazing_burning;
     obj_stargazing_player_2.image_speed = 0.2;
+    obj_stargazing_player_2.dead = true;
+    obj_stargazing_control.alarm[0] = room_speed * 2;
 }
 </string>
           </argument>
