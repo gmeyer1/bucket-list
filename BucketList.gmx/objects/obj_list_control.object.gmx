@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="7" enumb="2">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,48 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enum PLAYER {
-    PLAYER1,
-    PLAYER2
-};
+            <string>centerLine = 122;
+lineHeight = 26;
 
-enum INPUT {
-    RIGHT,
-    LEFT,
-    UP,
-    DOWN,
-    A
-};
-
-global.names = ds_map_create();
-ds_map_add(global.names, makemoney, "Become a millionare");
-ds_map_add(global.names, horseriding, "Ride a horse");
-ds_map_add(global.names, avalanche, "Climb a mountain");
-ds_map_add(global.names, childhood, "Relive childhood");
-ds_map_add(global.names, sumo, "Take up a new sport");
-ds_map_add(global.names, weightlifting, "Get buff");
-ds_map_add(global.names, sunsetshimmer, "Experience a sunrise");
-ds_map_add(global.names, airplane, "Travel to a new place");
-
-global.levels = ds_list_create();
-ds_list_add(global.levels, makemoney);
-ds_list_add(global.levels, horseriding);
-ds_list_add(global.levels, avalanche);
-ds_list_add(global.levels, childhood);
-ds_list_add(global.levels, sumo);
-ds_list_add(global.levels, weightlifting);
-ds_list_add(global.levels, sunsetshimmer);
-ds_list_add(global.levels, airplane);
-
-global.level = 0;
-
-global.toCross = false;
+if (global.toCross) {
+    alarm[0] = room_speed;
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="82">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -83,13 +53,13 @@ global.toCross = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>instance_create(-200, centerLine - lineHeight, obj_list_hand);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="78">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -106,7 +76,62 @@ global.toCross = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>draw_set_font(fnt_list);
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+
+var lineColor = make_colour_rgb(60, 60, 60);
+var lineWidth = 3;
+
+// Draw each level on the list
+for (var i = 0; i &lt;= global.level; i++) {
+    var level = ds_list_find_value(global.levels, global.level - i);
+    var name = ds_map_find_value(global.names, level);
+    var textX = 160;
+    var textY = centerLine - i * lineHeight;
+    
+    draw_text(textX, textY, name);
+    
+    var startCross = 0;
+    if (global.toCross) {
+        startCross = 1;
+    }
+    
+    // Cross out finished levels
+    if (i &gt; startCross) {
+        var width = string_width(name);
+        draw_line_width_colour(
+            textX - width / 2,
+            textY,
+            textX + width / 2 + 4,
+            textY,
+            lineWidth,
+            lineColor,
+            lineColor
+        );
+    }
+}
+
+// Draw the animated line
+var level = ds_list_find_value(global.levels, global.level - 1);
+var name = ds_map_find_value(global.names, level);
+var textX = 160;
+var textY = centerLine - 26;
+var width = string_width(name);
+var left = textX - width / 2;
+var right = textX + width / 2 + 4;
+
+if (instance_exists(obj_list_hand) &amp;&amp; obj_list_hand.x &gt; left) {
+    draw_line_width_colour(
+        left,
+        textY,
+        min(obj_list_hand.x, right),
+        textY,
+        lineWidth,
+        lineColor,
+        lineColor
+    );
+}
 </string>
           </argument>
         </arguments>

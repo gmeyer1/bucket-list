@@ -49,6 +49,9 @@
       <sprite>sprites\spr_player1_start</sprite>
       <sprite>sprites\spr_player2_start</sprite>
     </sprites>
+    <sprites name="list">
+      <sprite>sprites\spr_list_hand</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
@@ -58,6 +61,7 @@
     <background>background\bg_grass</background>
     <background>background\bg_bank</background>
     <background>background\bg_childhood</background>
+    <background>background\bg_list</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -75,6 +79,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_list</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_screen_control</object>
@@ -130,10 +135,15 @@
       <object>objects\obj_airplane</object>
       <object>objects\obj_airplane_countdown</object>
     </objects>
+    <objects name="list">
+      <object>objects\obj_list_control</object>
+      <object>objects\obj_list_hand</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
     <room>rooms\title</room>
+    <room>rooms\list</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
