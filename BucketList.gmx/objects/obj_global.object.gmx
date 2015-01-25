@@ -37,6 +37,8 @@ enum INPUT {
     DOWN,
     A
 };
+
+randomize();
 </string>
           </argument>
         </arguments>

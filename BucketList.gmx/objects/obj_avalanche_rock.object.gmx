@@ -68,7 +68,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y&lt;0)
+            <string>if (y&lt;-20)
    instance_destroy()
 </string>
           </argument>
