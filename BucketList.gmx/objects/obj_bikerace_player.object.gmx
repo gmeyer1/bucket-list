@@ -35,6 +35,30 @@ movespeed = 2;
 image_speed = 0;
 
 currframe = 1;
+finished = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(list);
 </string>
           </argument>
         </arguments>
@@ -57,54 +81,61 @@ currframe = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the player's input
-key_right = input_check(PLAYER.PLAYER2, INPUT.RIGHT);//keyboard_check(vk_right);
-key_left = -input_check(PLAYER.PLAYER2, INPUT.LEFT);//keyboard_check(vk_left);
-key_peddle = input_check_pressed(PLAYER.PLAYER1, INPUT.A);//check for input;
-
-//React to inputs
-//Only react if not staggered
-move = key_left + key_right;
-hsp = movespeed * move;
-//Horizontal Collision
-if (x &gt; room_width - 20)
-{
-    if (key_right)
+            <string>if (!finished) {
+    //Get the player's input
+    key_right = input_check(PLAYER.PLAYER2, INPUT.RIGHT);//keyboard_check(vk_right);
+    key_left = -input_check(PLAYER.PLAYER2, INPUT.LEFT);//keyboard_check(vk_left);
+    key_peddle = input_check_pressed(PLAYER.PLAYER1, INPUT.A);//check for input;
+    
+    //React to inputs
+    //Only react if not staggered
+    move = key_left + key_right;
+    hsp = movespeed * move;
+    //Horizontal Collision
+    if (x &gt; room_width - 20)
     {
+        if (key_right)
+        {
+            hsp = 0;
+        }
+    }
+    if (x &lt; 0 + 20)
+    {
+        if (key_left == -1)
+        {
         hsp = 0;
+        }
     }
-}
-if (x &lt; 0 + 20)
-{
-    if (key_left == -1)
+        
+    x += hsp;
+    
+    vmove = key_peddle;
+    vspeed += (vmove * accspeed) + decspeed;
+    if (vspeed &lt; -5)
     {
-    hsp = 0;
+        vspeed = -5;
     }
-}
+    if (vspeed &gt; 0)
+    {
+        vspeed = 0;
+        image_index = 0;
+    }
     
-x += hsp;
-
-vmove = key_peddle;
-vspeed += (vmove * accspeed) + decspeed;
-if (vspeed &lt; -5)
-{
-    vspeed = -5;
-}
-if (vspeed &gt; 0)
-{
-    vspeed = 0;
-    image_index = 0;
-}
-
-if (view_yview[0] &gt; 0)
-    view_yview[0] = y - 170
+    if (view_yview[0] &gt; 0)
+        view_yview[0] = y - 170
+        
+    if (vmove) {
+        image_index = currframe;
+        if (currframe == 1)
+            currframe = 2;
+        else
+            currframe = 1;
+    }
     
-if (vmove) {
-    image_index = currframe;
-    if (currframe == 1)
-        currframe = 2;
-    else
-        currframe = 1;
+    if (instance_place(x, y, obj_bikerace_finish)) {
+        alarm[0] = room_speed * 2;
+        finished = true;
+    }
 }
 </string>
           </argument>

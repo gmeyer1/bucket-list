@@ -83,7 +83,7 @@ if (timeLeft &lt;= 0) {
     
     var secondsLeft = timeLeft / room_speed;
     
-    draw_text(x, y, string_format(secondsLeft, 2, 1) + " seconds left!");
+    draw_text(x, y, "Survive " + string_format(secondsLeft, 2, 1) + " seconds!");
 }
 </string>
           </argument>

@@ -51,7 +51,7 @@ ds_map_add(global.names, weightlifting, "Get buff");
 ds_map_add(global.names, sunsetshimmer, "Experience a sunrise");
 ds_map_add(global.names, airplane, "Travel to a new place");
 ds_map_add(global.names, stargazing, "Go stargazing");
-ds_map_add(global.names, stargazing, "Join a bike marathon");
+ds_map_add(global.names, bikerace, "Join a bike marathon");
 
 global.levels = ds_list_create();
 ds_list_add(global.levels, makemoney);
@@ -66,29 +66,6 @@ ds_list_add(global.levels, sumo);
 ds_list_add(global.levels, bikerace);
 
 global.level = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room_restart();
 </string>
           </argument>
         </arguments>
@@ -113,6 +90,29 @@ global.level = 0;
             <kind>1</kind>
             <string>global.level++;
 room_goto(ds_list_find_value(global.levels, global.level));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="76">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
 </string>
           </argument>
         </arguments>
