@@ -97,6 +97,7 @@
     <background>background\bg_stargazing_sky</background>
     <background>background\bg_stargazing_ground</background>
     <background>background\bg_gym</background>
+    <background>background\bg_start</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
