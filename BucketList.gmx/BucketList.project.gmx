@@ -37,8 +37,6 @@
       <sprite>sprites\spr_weight_weight</sprite>
     </sprites>
     <sprites name="sunsetshimmer">
-      <sprite>sprites\spr_sunset_player_1</sprite>
-      <sprite>sprites\spr_sunset_player_2</sprite>
       <sprite>sprites\spr_sunset_sun</sprite>
       <sprite>sprites\spr_sunset_makeoutpoint</sprite>
     </sprites>
@@ -114,8 +112,6 @@
       <object>objects\obj_weight_weight</object>
     </objects>
     <objects name="sunsetshimmer">
-      <object>objects\obj_sunset_player_1</object>
-      <object>objects\obj_sunset_player_2</object>
       <object>objects\obj_sunset_makeoutpoint</object>
       <object>objects\obj_sunset_sun</object>
     </objects>

@@ -26,27 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>startY = y;
+fallspeed = 3;
+risespeed = -0.5;
+image_speed = 0;
+vspeed = risespeed;
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>104</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_vspeed</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>-1/15</string>
           </argument>
         </arguments>
       </action>
@@ -71,42 +55,53 @@
             <string>if (vspeed &lt; 0) {
     if (y == 32) {
     //win condition
-        y = -64;
+        //y = -64;
     }
     if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }
     if (input_check_pressed(PLAYER.PLAYER1, INPUT.DOWN)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }     
      if (input_check_pressed(PLAYER.PLAYER1, INPUT.LEFT)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }     
      if (input_check_pressed(PLAYER.PLAYER1, INPUT.RIGHT)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }   
      if (input_check_pressed(PLAYER.PLAYER1, INPUT.A)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }   
      if (input_check_pressed(PLAYER.PLAYER2, INPUT.UP)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }
      if (input_check_pressed(PLAYER.PLAYER2, INPUT.DOWN)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }     
      if (input_check_pressed(PLAYER.PLAYER2, INPUT.LEFT)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }     
      if (input_check_pressed(PLAYER.PLAYER2, INPUT.RIGHT)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }   
      if (input_check_pressed(PLAYER.PLAYER2, INPUT.A)) {
-        vspeed = 1;
+        vspeed = fallspeed;
+        image_index = 1;
      }
 }
 if (vspeed &gt; 0) {
     if (y &gt;= startY){
-        vspeed = -1/15;
+        vspeed = risespeed;
+        image_index = 0;
     }
 }    
 </string>
