@@ -43,7 +43,7 @@ case INPUT.DOWN:
     break;
     
 case INPUT.A:
-    if ((player == 0 && keyboard_check_pressed(vk_lshift)) || (player == 1 && keyboard_check_pressed(vk_rshift)) || gamepad_button_check_pressed(player, gp_face1))
+    if ((player == 0 && keyboard_check_pressed(vk_space)) || (player == 1 && keyboard_check_pressed(vk_enter)) || gamepad_button_check_pressed(player, gp_face1))
     {
         return true;
     }
