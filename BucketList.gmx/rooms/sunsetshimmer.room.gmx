@@ -52,8 +52,6 @@
   </views>
   <instances>
     <instance objName="obj_sunset_makeoutpoint" x="160" y="120" name="inst_39ECA2A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="48" y="192" name="inst_4DA78D32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="112" y="192" name="inst_36460CA8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sunset_sun" x="160" y="360" name="inst_3C72A2C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

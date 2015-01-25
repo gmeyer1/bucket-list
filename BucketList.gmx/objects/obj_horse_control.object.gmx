@@ -53,9 +53,9 @@ alarm[1] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(0,0,obj_horse_rock)
+            <string>instance_create(0,-40,obj_horse_rock)
 
-instance_create(room_width,0,obj_horse_rock)
+instance_create(room_width,-40,obj_horse_rock)
 
 alarm[1] = atime2;
 </string>
@@ -80,7 +80,7 @@ alarm[1] = atime2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(random(room_width - 80) + 40,0,obj_horse_rock)
+            <string>instance_create(random(room_width - 80) + 40,-40,obj_horse_rock)
 
 alarm[0] = atime;
 </string>
