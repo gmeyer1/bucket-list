@@ -7,6 +7,12 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite1</sprite>
+    <sprites name="group">
+      <sprite>sprites\spr_die</sprite>
+    </sprites>
+    <sprites name="intro">
+      <sprite>sprites\spr_intro</sprite>
+    </sprites>
     <sprites name="makemoney">
       <sprite>sprites\spr_money_player_1</sprite>
       <sprite>sprites\spr_money_player_2</sprite>
@@ -118,6 +124,12 @@
     <object>objects\obj_test</object>
     <object>objects\obj_debug_next</object>
     <object>objects\obj_timer</object>
+    <objects name="die">
+      <object>objects\obj_die</object>
+    </objects>
+    <objects name="intro">
+      <object>objects\obj_intro</object>
+    </objects>
     <objects name="title">
       <object>objects\obj_player1_start</object>
       <object>objects\obj_player2_start</object>
@@ -180,6 +192,7 @@
       <object>objects\obj_stargazing_star_sm</object>
       <object>objects\obj_stargazing_player_1</object>
       <object>objects\obj_stargazing_player_2</object>
+      <object>objects\obj_stargazing_control</object>
     </objects>
     <objects name="bikerace">
       <object>objects\obj_bikerace_player</object>
@@ -194,6 +207,8 @@
   <rooms name="rooms">
     <room>rooms\start</room>
     <room>rooms\title</room>
+    <room>rooms\die</room>
+    <room>rooms\intro</room>
     <room>rooms\list</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>

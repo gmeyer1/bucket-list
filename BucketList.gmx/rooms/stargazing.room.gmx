@@ -63,7 +63,7 @@
     <instance objName="obj_stargazing_star_md" x="64" y="80" name="inst_B646FA5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stargazing_star_md" x="176" y="64" name="inst_F742C649" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stargazing_star_md" x="288" y="16" name="inst_A7D72505" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stargazing_star_md" x="208" y="80" name="inst_56097BE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stargazing_control" x="0" y="0" name="inst_DB612EF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stargazing_star_md" x="256" y="32" name="inst_68FE9DCF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stargazing_star_sm" x="16" y="16" name="inst_BD864F47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stargazing_star_sm" x="64" y="48" name="inst_30E50C51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

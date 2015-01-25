@@ -29,6 +29,7 @@
 hsp = 0;
 movespeed = 3;
 image_speed = 0;
+dead = false;
 </string>
           </argument>
         </arguments>
@@ -98,47 +99,49 @@ alarm[2] = 30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the player's input
-key_right = input_check(PLAYER.PLAYER1, INPUT.RIGHT);//keyboard_check(vk_right);
-key_left = -input_check(PLAYER.PLAYER1, INPUT.LEFT);//keyboard_check(vk_left);
-
-//React to inputs
-//Only react if not staggered
-if (obj_stargazing_player_1.hspeed = 0) {
-    move = key_left + key_right;
-    hsp = movespeed * move;
-    //Horizontal Collision
-    if (x &gt; room_width)
-    {
-        if (key_right)
+            <string>if (!dead) {
+    //Get the player's input
+    key_right = input_check(PLAYER.PLAYER1, INPUT.RIGHT);//keyboard_check(vk_right);
+    key_left = -input_check(PLAYER.PLAYER1, INPUT.LEFT);//keyboard_check(vk_left);
+    
+    //React to inputs
+    //Only react if not staggered
+    if (obj_stargazing_player_1.hspeed = 0) {
+        move = key_left + key_right;
+        hsp = movespeed * move;
+        //Horizontal Collision
+        if (x &gt; room_width)
         {
+            if (key_right)
+            {
+                hsp = 0;
+            }
+        }
+        if (x &lt; 0)
+        {
+            if (key_left == -1)
+            {
             hsp = 0;
+            }
         }
-    }
-    if (x &lt; 0)
-    {
-        if (key_left == -1)
+        
+        if ( move == 0) {
+            image_index = 0;
+        } else {
+            image_index = 1;
+        }
+        
+        if (place_meeting(x,y,obj_stargazing_player_2))
         {
-        hsp = 0;
+            alarm[1] = 1;
         }
+        
+        x += hsp;
     }
     
-    if ( move == 0) {
-        image_index = 0;
-    } else {
-        image_index = 1;
+    if (image_index == 2) {
+        image_speed = 0;
     }
-    
-    if (place_meeting(x,y,obj_stargazing_player_2))
-    {
-        alarm[1] = 1;
-    }
-    
-    x += hsp;
-}
-
-if (image_index == 2) {
-    image_speed = 0;
 }
 </string>
           </argument>
