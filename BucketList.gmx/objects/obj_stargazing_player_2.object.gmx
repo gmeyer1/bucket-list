@@ -103,7 +103,7 @@ key_left = -input_check(PLAYER.PLAYER2, INPUT.LEFT);//keyboard_check(vk_left);
 
 //React to inputs
 //Only react if not staggered
-if (obj_stargazing_player_2.hspeed = 0) {
+if (obj_stargazing_player_2.hspeed == 0) {
     move = key_left + key_right;
     hsp = movespeed * move;
     //Horizontal Collision

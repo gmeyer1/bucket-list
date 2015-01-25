@@ -63,6 +63,7 @@
     <sprites name="bikerace">
       <sprite>sprites\spr_bikerace_player</sprite>
       <sprite>sprites\spr_bikerace_opponent</sprite>
+      <sprite>sprites\spr_bikerace_bikewall</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -76,6 +77,7 @@
     <background>background\bg_list</background>
     <background>background\bg_bikerace</background>
     <background>background\bg_avalanche</background>
+    <background>background\bg_plane</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -160,6 +162,11 @@
       <object>objects\obj_stargazing_star_sm</object>
       <object>objects\obj_stargazing_player_1</object>
       <object>objects\obj_stargazing_player_2</object>
+    </objects>
+    <objects name="bikerace">
+      <object>objects\obj_bikerace_player</object>
+      <object>objects\obj_bikerace_opponent</object>
+      <object>objects\obj_bikerace_bikewall</object>
     </objects>
   </objects>
   <rooms name="rooms">
