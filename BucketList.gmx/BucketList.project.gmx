@@ -48,6 +48,7 @@
     <background>background\bg_mountain</background>
     <background>background\bg_sumo</background>
     <background>background\bg_grass</background>
+    <background>background\bg_bank</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
