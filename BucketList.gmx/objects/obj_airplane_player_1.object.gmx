@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Initialize Variables
-hsp = 0;
-movespeed = 5;
-p2movespeed = 3;
+            <string>moveSpeed = 3;
+offset = -64; // Distance from plane's center
 </string>
           </argument>
         </arguments>
@@ -51,31 +49,20 @@ p2movespeed = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the player's input
-key_right = input_check(PLAYER.PLAYER1, INPUT.RIGHT);//keyboard_check(vk_right);
-key_left = -input_check(PLAYER.PLAYER1, INPUT.LEFT);//keyboard_check(vk_left);
+            <string>var dir = input_check(PLAYER.PLAYER1, INPUT.RIGHT) - input_check(PLAYER.PLAYER1, INPUT.LEFT);
 
-//React to inputs
-move = key_left + key_right;
-hsp = movespeed * move;
-
-//Horizontal Collision
-if (x &gt; room_width)
-{
-    if (key_right)
-    {
-        hsp = 0;
-    }
-}
-if (x &lt; 0)
-{
-    if (key_left == -1)
-    {
-        hsp = 0;
-    }
+if (dir &lt; 0) {
+    offset -= moveSpeed;
+    if (offset &lt; -obj_airplane.wingLength) offset = -obj_airplane.wingLength;
+    
+} else if (dir &gt; 0) {
+    offset += moveSpeed;
+    if (offset &gt; -obj_airplane.cockpitSize) offset = -obj_airplane.cockpitSize;
 }
 
-x += hsp;
+x = obj_airplane.x + lengthdir_x(offset, obj_airplane.image_angle);
+y = obj_airplane.y + lengthdir_y(offset, obj_airplane.image_angle);
+image_angle = obj_airplane.image_angle;
 </string>
           </argument>
         </arguments>

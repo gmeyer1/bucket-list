@@ -36,10 +36,18 @@
       <sprite>sprites\spr_weight_player_2</sprite>
       <sprite>sprites\spr_weight_weight</sprite>
     </sprites>
+    <sprites name="sunsetshimmer">
+      <sprite>sprites\spr_sunset_sun</sprite>
+      <sprite>sprites\spr_sunset_makeoutpoint</sprite>
+    </sprites>
     <sprites name="airplane">
       <sprite>sprites\spr_airplane_player_1</sprite>
       <sprite>sprites\spr_airplane_player_2</sprite>
-      <sprite>sprites\spr_airplane_airplane</sprite>
+      <sprite>sprites\spr_airplane</sprite>
+    </sprites>
+    <sprites name="title">
+      <sprite>sprites\spr_player1_start</sprite>
+      <sprite>sprites\spr_player2_start</sprite>
     </sprites>
     <sprites name="stargazing">
       <sprite>sprites\spr_stargazing_star_lg</sprite>
@@ -55,12 +63,22 @@
     <background>background\bg_mountain</background>
     <background>background\bg_sumo</background>
     <background>background\bg_grass</background>
+    <background>background\bg_bank</background>
+    <background>background\bg_childhood</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\input_check.gml</script>
     <script>scripts\input_check_released.gml</script>
     <script>scripts\input_check_pressed.gml</script>
+    <scripts name="SimplexNoise">
+      <script>scripts\fractional_brownian_motion.gml</script>
+      <script>scripts\simplex_init.gml</script>
+      <script>scripts\simplex_grad.gml</script>
+      <script>scripts\simplex_noise.gml</script>
+      <script>scripts\simplex_cleanup.gml</script>
+      <script>scripts\simplex_set_perm.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
@@ -70,6 +88,11 @@
     <object>objects\obj_global</object>
     <object>objects\obj_test</object>
     <object>objects\obj_debug_next</object>
+    <objects name="title">
+      <object>objects\obj_player1_start</object>
+      <object>objects\obj_player2_start</object>
+      <object>objects\obj_title_control</object>
+    </objects>
     <objects name="makemoney">
       <object>objects\obj_money_bag</object>
       <object>objects\obj_money_player_1</object>
@@ -104,10 +127,15 @@
       <object>objects\obj_weight_player_2</object>
       <object>objects\obj_weight_weight</object>
     </objects>
+    <objects name="sunsetshimmer">
+      <object>objects\obj_sunset_makeoutpoint</object>
+      <object>objects\obj_sunset_sun</object>
+    </objects>
     <objects name="airplane">
       <object>objects\obj_airplane_player_1</object>
       <object>objects\obj_airplane_player_2</object>
-      <object>objects\obj_airplane_airplane</object>
+      <object>objects\obj_airplane</object>
+      <object>objects\obj_airplane_countdown</object>
     </objects>
     <objects name="stargazing">
       <object>objects\obj_stargazing_star_lg</object>
@@ -119,12 +147,14 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
+    <room>rooms\title</room>
     <room>rooms\makemoney</room>
     <room>rooms\horseriding</room>
     <room>rooms\avalanche</room>
     <room>rooms\childhood</room>
     <room>rooms\sumo</room>
     <room>rooms\weightlifting</room>
+    <room>rooms\sunsetshimmer</room>
     <room>rooms\airplane</room>
     <room>rooms\stargazing</room>
     <room>rooms\template</room>
