@@ -51,9 +51,9 @@
             <kind>1</kind>
             <string>player1press = 0;
 player2press = 0;
-weightSpeed = 10;
+weightSpeed = 5;
 currentScore = 0;
-maxScore = 5; 
+maxScore = 10; 
 fails = 0;
 </string>
           </argument>
@@ -155,7 +155,7 @@ fails = 0;
             if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
                 y += weightSpeed;
                 currentScore -= 1;
-                fails = 1;
+                //fails = 1;
             }
             player1press = 0;
         }
@@ -168,7 +168,7 @@ fails = 0;
             if (currentScore &gt; 0) &amp;&amp; (fails == 0)  {
                 y += weightSpeed;
                 currentScore -= 1;
-                fails = 1;
+                //fails = 1;
             }
             player2press = 0;
         }

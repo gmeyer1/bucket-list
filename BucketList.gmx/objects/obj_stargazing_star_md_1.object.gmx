@@ -29,7 +29,7 @@
 hsp = 0;
 vsp = 0;
 movespeed = 5;
-alarm[0] = 300;
+alarm[0] = 170;
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,8 @@ alarm[0] = 300;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_stargazing_star_md.vspeed = 2;
-obj_stargazing_star_md.hspeed = 1;
+            <string>vspeed = 1;
+hspeed = 2;
 </string>
           </argument>
         </arguments>
