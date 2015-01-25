@@ -41,6 +41,13 @@
       <sprite>sprites\spr_airplane_player_2</sprite>
       <sprite>sprites\spr_airplane_airplane</sprite>
     </sprites>
+    <sprites name="stargazing">
+      <sprite>sprites\spr_stargazing_star_lg</sprite>
+      <sprite>sprites\spr_stargazing_star_md</sprite>
+      <sprite>sprites\spr_stargazing_star_sm</sprite>
+      <sprite>sprites\spr_stargazing_player_1</sprite>
+      <sprite>sprites\spr_stargazing_player_2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_makemoney</background>
@@ -102,6 +109,13 @@
       <object>objects\obj_airplane_player_2</object>
       <object>objects\obj_airplane_airplane</object>
     </objects>
+    <objects name="stargazing">
+      <object>objects\obj_stargazing_star_lg</object>
+      <object>objects\obj_stargazing_star_md</object>
+      <object>objects\obj_stargazing_star_sm</object>
+      <object>objects\obj_stargazing_player_1</object>
+      <object>objects\obj_stargazing_player_2</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\start</room>
@@ -111,8 +125,9 @@
     <room>rooms\childhood</room>
     <room>rooms\sumo</room>
     <room>rooms\weightlifting</room>
-    <room>rooms\template</room>
     <room>rooms\airplane</room>
+    <room>rooms\stargazing</room>
+    <room>rooms\template</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
