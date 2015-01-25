@@ -37,7 +37,6 @@
     </sprites>
     <sprites name="weightlifting">
       <sprite>sprites\spr_weight_player_1</sprite>
-      <sprite>sprites\spr_weight_player_2</sprite>
       <sprite>sprites\spr_weight_weight</sprite>
     </sprites>
     <sprites name="sunsetshimmer">
@@ -89,6 +88,7 @@
     <background>background\bg_ambulance</background>
     <background>background\bg_stargazing_sky</background>
     <background>background\bg_stargazing_ground</background>
+    <background>background\bg_gym</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -154,7 +154,6 @@
     </objects>
     <objects name="weightlifting">
       <object>objects\obj_weight_player_1</object>
-      <object>objects\obj_weight_player_2</object>
       <object>objects\obj_lift_command</object>
       <object>objects\obj_weight_weight</object>
       <object>objects\obj_weight_score</object>
