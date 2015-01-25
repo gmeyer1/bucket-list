@@ -56,7 +56,8 @@ image_speed = 0.15;
 if (place_meeting(x,y,obj_bikerace_player))
 {
     obj_bikerace_player.sprite_index = spr_bikerace_player_fall;
-    room_restart();
+    audio_play_sound(snd_scream, 100, false);
+    room_goto(ambulance);
 }
 </string>
           </argument>
