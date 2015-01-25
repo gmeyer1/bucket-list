@@ -67,14 +67,14 @@ key_peddle = input_check_pressed(PLAYER.PLAYER1, INPUT.A);//check for input;
 move = key_left + key_right;
 hsp = movespeed * move;
 //Horizontal Collision
-if (x &gt; room_width)
+if (x &gt; room_width - 20)
 {
     if (key_right)
     {
         hsp = 0;
     }
 }
-if (x &lt; 0)
+if (x &lt; 0 + 20)
 {
     if (key_left == -1)
     {
