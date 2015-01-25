@@ -186,6 +186,7 @@ fails = 0;
     if (currentScore &gt;= maxScore) {
         alarm[1] = room_speed;
         obj_lift_command.visible = false;
+        audio_play_sound(dingdong, 100, false);
     }
 }
 

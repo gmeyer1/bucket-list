@@ -149,6 +149,7 @@ alarm[0] = stepTime;
     sprite_index = spr_sumo_fall;
     depth = 5;
     alarm[1] = room_speed;
+    audio_play_sound(dingdong, 100, false);
 }
 </string>
           </argument>

@@ -54,6 +54,7 @@ vspeed = risespeed;
             <kind>1</kind>
             <string>if (vspeed &lt; 0) {
     if (y == 32) {
+        audio_play_sound(dingdong, 100, false);
         room_goto(list);
     }
     if (input_check_pressed(PLAYER.PLAYER1, INPUT.UP)) {

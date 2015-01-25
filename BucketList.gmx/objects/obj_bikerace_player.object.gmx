@@ -135,6 +135,7 @@ finished = false;
     if (instance_place(x, y, obj_bikerace_finish)) {
         alarm[0] = room_speed * 2;
         finished = true;
+        audio_play_sound(dingdong, 100, false);
     }
 }
 </string>

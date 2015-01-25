@@ -51,6 +51,7 @@
             <string>if (obj_airplane.hasTurbulence) timeLeft--;
 
 if (timeLeft &lt;= 0) {
+    audio_play_sound(dingdong, 100, false);
     room_goto(list);
 }
 </string>

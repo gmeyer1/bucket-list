@@ -78,6 +78,7 @@ alarm[0] = 480;
             <string>if (y&gt;room_height) {
     if (instance_number(obj_stargazing_star_lg) == 1) {
         obj_stargazing_control.alarm[1] = room_speed;
+        audio_play_sound(dingdong, 100, false);
     }
     instance_destroy();
 }

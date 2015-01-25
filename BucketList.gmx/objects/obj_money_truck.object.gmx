@@ -36,6 +36,7 @@ if (bag != noone &amp;&amp; bag.x &gt; x + 10) {
         if (obj_money_counter.count &gt;= obj_money_counter.maxCount &amp;&amp; !obj_money_control.finished) {
             obj_money_control.alarm[1] = room_speed * 2;
             obj_money_control.finished = true;
+            audio_play_sound(dingdong, 100, false);
         }
     }
 }
