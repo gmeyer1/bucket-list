@@ -74,6 +74,7 @@ offscreen = false;
             <kind>1</kind>
             <string>hspeed = -4;
 image_speed = 0.2;
+audio_play_sound(snd_ambulance, 100, false);
 </string>
           </argument>
         </arguments>
