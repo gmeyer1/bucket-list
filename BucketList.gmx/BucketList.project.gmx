@@ -105,7 +105,6 @@
       <script>scripts\simplex_cleanup.gml</script>
       <script>scripts\simplex_set_perm.gml</script>
     </scripts>
-    <script>scripts\script10.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
