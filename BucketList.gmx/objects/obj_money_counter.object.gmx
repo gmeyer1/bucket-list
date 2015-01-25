@@ -53,6 +53,7 @@ maxCount = 25;
 
 draw_set_valign(fa_middle);
 draw_set_font(fnt_small);
+draw_set_colour(c_black);
 draw_text(x + 44, y, string(count) + " / " + string(maxCount));
 </string>
           </argument>
