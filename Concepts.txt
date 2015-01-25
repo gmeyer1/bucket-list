@@ -22,10 +22,10 @@ DO PARKOUR:
 - Player 1 is running
 - Player 2 is helping them up
 
-TRAVEL:
+TRAVEL WORKING ON:
 - Players on each wing, try to keep it balanced in turbulence
 
-GET FIT:
+GET FIT WORKING ON:
 - Work together to lift a weight
 - Press the button at the same time
 - 10 reps to win
@@ -34,20 +34,20 @@ PARTICIPATE IN A BIKE MARATHON:
 - Player 1 is blindfolded, running (mash A)
 - Player 2 is steering
 
-TAKE UP A NEW SPORT:
+TAKE UP A NEW SPORT DONE:
 - Players taped together
 - "Tank tread" controls
 - Push off the other sumo
 - Knocked off: ambulance
 
-CLIMB A MOUNTAIN:
+CLIMB A MOUNTAIN DONE:
 - Skifree
 - Mess up -> go to hospital (like skydiving)
 
 ACTUALLY CLIMB A MOUNTAIN:
 - Pull each other up?
 
-MAKE SOME MONEY:
+MAKE SOME MONEY DONE:
 - Rob a bank
 - Press A in time to pass bags of money along to truck
 - 5 to win
@@ -56,19 +56,19 @@ GO DIVING:
 - Player 1 pumps air
 - Player 2 dodges sharks
 
-GO HORSEBACK RIDING:
+GO HORSEBACK RIDING DONE:
 - Player 1 riding horse
 - Player 2 dragged by rope
 - Both trying to avoid obstacles
 
-EXPERIENCE A SUNRISE:
+EXPERIENCE A SUNRISE DONE:
 - Don't press any buttons or the sun gets grumpy and goes back down
 
-GO STARGAZING:
+GO STARGAZING DONE:
 - Stars falling from sky
 - Collide with each other
 
-RELIVE CHILDHOOD:
+RELIVE CHILDHOOD DONE:
 - Seesaw on the top of a mountain
 - 5 back and forth to win
 - Screw up and fall off

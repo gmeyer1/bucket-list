@@ -29,6 +29,7 @@
 hsp = 0;
 movespeed = 5;
 hitspeed = -3;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -68,6 +69,7 @@ if (place_meeting(x,y,obj_avalanche_rock))
 {
     hsp = 0;
     vspeed = hitspeed;
+    image_index = 1;
 }
 
 //Horizontal Collision
@@ -89,6 +91,7 @@ if (instance_place(x, y, obj_avalanche_player_2))
 {
     hsp = 0;
     vspeed = hitspeed;
+    image_index = 1;
     //if (!key_right)
         //x += hsp;
 }
