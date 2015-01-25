@@ -47,7 +47,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y&gt;room_height)
+            <string>if (y&gt;room_height + 20)
    instance_destroy()
    
 if (place_meeting(x,y,obj_horse_player_1) || place_meeting(x,y,obj_horse_player_2))

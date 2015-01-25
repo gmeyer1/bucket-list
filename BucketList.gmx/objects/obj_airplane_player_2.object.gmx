@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>moveSpeed = 3;
 offset = 64; // Distance from plane's center
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -53,11 +54,15 @@ offset = 64; // Distance from plane's center
 
 if (dir &lt; 0) {
     offset -= moveSpeed;
+    image_index = 1;
     if (offset &lt; obj_airplane.cockpitSize) offset = obj_airplane.cockpitSize;
     
 } else if (dir &gt; 0) {
     offset += moveSpeed;
+    image_index = 1;
     if (offset &gt; obj_airplane.wingLength) offset = obj_airplane.wingLength;
+} else {
+    image_index = 0;
 }
 
 x = obj_airplane.x + lengthdir_x(offset, obj_airplane.image_angle);

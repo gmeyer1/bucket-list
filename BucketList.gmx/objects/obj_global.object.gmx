@@ -38,6 +38,9 @@ enum INPUT {
     A
 };
 
+
+randomize();
+
 global.names = ds_map_create();
 ds_map_add(global.names, makemoney, "Become a millionare");
 ds_map_add(global.names, horseriding, "Ride a horse");
@@ -58,9 +61,9 @@ ds_list_add(global.levels, weightlifting);
 ds_list_add(global.levels, sunsetshimmer);
 ds_list_add(global.levels, airplane);
 
-global.level = 0;
+global.level = 5;
+global.toCross = true;
 
-global.toCross = false;
 </string>
           </argument>
         </arguments>
