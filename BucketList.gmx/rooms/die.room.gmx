@@ -3,8 +3,8 @@
   <caption></caption>
   <width>320</width>
   <height>240</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_die" x="0" y="0" name="inst_C7C544D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_die_controller" x="168" y="64" name="inst_AD9BE600" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

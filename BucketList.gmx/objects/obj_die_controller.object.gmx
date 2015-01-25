@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="7" enumb="2">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,54 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enum PLAYER {
-    PLAYER1,
-    PLAYER2
-};
+            <string>alarm[0] = 120;
 
-enum INPUT {
-    RIGHT,
-    LEFT,
-    UP,
-    DOWN,
-    A
-};
+dodraw = 0;
 
-
-randomize();
-
-global.names = ds_map_create();
-ds_map_add(global.names, makemoney, "Become a millionare");
-ds_map_add(global.names, horseriding, "Ride a horse");
-ds_map_add(global.names, avalanche, "Go skiing");
-ds_map_add(global.names, childhood, "Relive childhood");
-ds_map_add(global.names, sumo, "Take up a new sport");
-ds_map_add(global.names, weightlifting, "Get buff");
-ds_map_add(global.names, sunsetshimmer, "Experience a sunrise");
-ds_map_add(global.names, airplane, "Travel to a new place");
-ds_map_add(global.names, stargazing, "Go stargazing");
-ds_map_add(global.names, bikerace, "Join a bike marathon");
-ds_map_add(global.names, die, "Die");
-
-global.levels = ds_list_create();
-ds_list_add(global.levels, makemoney);
-ds_list_add(global.levels, airplane);
-ds_list_add(global.levels, childhood);
-ds_list_add(global.levels, avalanche);
-ds_list_add(global.levels, stargazing);
-ds_list_add(global.levels, sunsetshimmer);
-ds_list_add(global.levels, horseriding);
-ds_list_add(global.levels, weightlifting);
-ds_list_add(global.levels, sumo);
-ds_list_add(global.levels, die);
-
-global.level = 0;
+obj_timer.enabled = false;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="78">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -89,14 +52,13 @@ global.level = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.level++;
-room_goto(ds_list_find_value(global.levels, global.level));
+            <string>dodraw = 1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="76">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -113,7 +75,24 @@ room_goto(ds_list_find_value(global.levels, global.level));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>draw_set_font(fnt_small);
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+draw_set_color(c_black);
+
+//if (obj_intro.speaker == 0)
+//    draw_set_color(c_white);
+//if (obj_intro.speaker == 1)
+//    draw_set_color(c_red);
+//if (obj_intro.speaker == 2)
+//    draw_set_color(c_blue);
+
+//text = "The world is going to end in 5 minutes and 34 seconds.";
+
+if (dodraw)
+{
+    draw_text(x, y, "Congratulations!")
+}
 </string>
           </argument>
         </arguments>

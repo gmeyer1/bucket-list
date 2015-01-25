@@ -14,7 +14,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite1</sprite>
-    <sprites name="group">
+    <sprites name="die">
       <sprite>sprites\spr_die</sprite>
     </sprites>
     <sprites name="intro">
@@ -135,6 +135,7 @@
     <object>objects\obj_timer</object>
     <objects name="die">
       <object>objects\obj_die</object>
+      <object>objects\obj_die_controller</object>
     </objects>
     <objects name="intro">
       <object>objects\obj_intro</object>
