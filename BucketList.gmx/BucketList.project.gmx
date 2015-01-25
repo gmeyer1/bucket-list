@@ -65,6 +65,7 @@
     <background>background\bg_grass</background>
     <background>background\bg_bank</background>
     <background>background\bg_childhood</background>
+    <background>background\bg_avalanche</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
