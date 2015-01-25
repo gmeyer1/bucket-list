@@ -79,9 +79,16 @@ obj_stargazing_star_sm.hspeed = -1;
             <string>if (y&gt;room_height)
    instance_destroy()
    
-if (place_meeting(x,y,obj_stargazing_player_1) || place_meeting(x,y,obj_stargazing_player_2))
+if (place_meeting(x,y,obj_stargazing_player_1))
 {
-    room_restart();
+    obj_stargazing_player_1.sprite_index = spr_stargazing_burning;
+    obj_stargazing_player_1.image_speed = 0.2;
+}
+
+if (place_meeting(x,y,obj_stargazing_player_2))
+{
+    obj_stargazing_player_2.sprite_index = spr_stargazing_burning;
+    obj_stargazing_player_2.image_speed = 0.2;
 }
 </string>
           </argument>
