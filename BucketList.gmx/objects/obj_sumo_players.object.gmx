@@ -28,6 +28,8 @@
             <string>angleRate = 5; // Degrees to turn per step
 offset = 18; // Pixel offset of players from the center
 pushDistance = 4; // Push distance in pixels
+image_speed = 0;
+fallen = 0;
 </string>
           </argument>
         </arguments>
@@ -55,7 +57,7 @@ var lDir = input_check_pressed(PLAYER.PLAYER1, INPUT.UP) - input_check_pressed(P
 var rDir = input_check_pressed(PLAYER.PLAYER2, INPUT.UP) - input_check_pressed(PLAYER.PLAYER2, INPUT.DOWN);
 
 // Handle right side
-if (rDir != 0) {
+if (rDir != 0 &amp;&amp; !fallen) {
     // Position of left player
     var lastX = x - lengthdir_x(offset, image_angle - 90);
     var lastY = y - lengthdir_y(offset, image_angle - 90);
@@ -64,10 +66,12 @@ if (rDir != 0) {
     
     x = lastX + lengthdir_x(offset, image_angle - 90);
     y = lastY + lengthdir_y(offset, image_angle - 90);
+    
+    image_index = 2;
 }
 
 // Handle left side
-if (lDir != 0) {
+if (lDir != 0 &amp;&amp; !fallen) {
     // Position of left player
     var lastX = x - lengthdir_x(offset, image_angle + 90);
     var lastY = y - lengthdir_y(offset, image_angle + 90);
@@ -76,12 +80,21 @@ if (lDir != 0) {
     
     x = lastX + lengthdir_x(offset, image_angle + 90);
     y = lastY + lengthdir_y(offset, image_angle + 90);
+    
+    image_index = 1;
 }
 
 // Push the sumo
-if ((lDir != 0 || rDir != 0) &amp;&amp; instance_place(x, y, obj_sumo)) {
+if ((lDir != 0 || rDir != 0) &amp;&amp; instance_place(x, y, obj_sumo) &amp;&amp; !fallen) {
     obj_sumo.x += lengthdir_x(pushDistance, image_angle);
     obj_sumo.y += lengthdir_y(pushDistance, image_angle);
+}
+
+if (!instance_place(x, y, obj_sumo_ring))
+{
+    fallen = 1;
+    sprite_index = spr_sumo_players_fall;
+    depth = 5;
 }
 </string>
           </argument>

@@ -31,6 +31,9 @@
     <sprites name="sumo">
       <sprite>sprites\spr_sumo</sprite>
       <sprite>sprites\spr_sumo_players</sprite>
+      <sprite>sprites\spr_sumo_fall</sprite>
+      <sprite>sprites\spr_sumo_players_fall</sprite>
+      <sprite>sprites\spr_sumo_ring</sprite>
     </sprites>
     <sprites name="weightlifting">
       <sprite>sprites\spr_weight_player_1</sprite>
@@ -146,6 +149,7 @@
     </objects>
     <objects name="sumo">
       <object>objects\obj_sumo</object>
+      <object>objects\obj_sumo_ring</object>
       <object>objects\obj_sumo_players</object>
     </objects>
     <objects name="weightlifting">
